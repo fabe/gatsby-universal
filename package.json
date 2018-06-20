@@ -1,0 +1,23 @@
+{
+  "name": "gatsby-redux-intro",
+  "license": "MIT",
+  "scripts": {
+    "develop": "gatsby develop",
+    "build": "gatsby build"
+  },
+  "dependencies": {
+    "gatsby": "2.0.0-beta.4",
+    "prop-types": "15.6.2",
+    "react": "16.4.1",
+    "react-dom": "16.4.1",
+    "react-redux": "5.0.7",
+    "react-router-dom": "^4.3.1",
+    "redux": "4.0.0",
+    "reselect": "^3.0.1",
+    "styled-components": "3.3.3"
+  },
+  "devDependencies": {
+    "directory-named-webpack-plugin": "4.0.0",
+    "gatsby-plugin-styled-components": "2.0.11"
+  }
+}
