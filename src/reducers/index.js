@@ -1,4 +1,4 @@
-import { combineReducers } from 'redux';
+import { combineReducers } from 'redux-immutable';
 import modal from 'reducers/modal';
 
 const rootReducer = combineReducers({

@@ -1,1 +1,1 @@
-export const getModalStatus = state => state.modal.visible;
+export const getModalStatus = state => state.get('modal').get('visible');
