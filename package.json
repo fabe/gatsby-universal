@@ -3,21 +3,25 @@
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
-    "build": "gatsby build"
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "ssr": "npm run build && npm run serve"
   },
   "dependencies": {
-    "gatsby": "2.0.0-beta.4",
+    "babel-plugin-styled-components": "1.5.1",
+    "gatsby": "next",
     "prop-types": "15.6.2",
     "react": "16.4.1",
     "react-dom": "16.4.1",
     "react-redux": "5.0.7",
-    "react-router-dom": "^4.3.1",
+    "react-router-dom": "4.3.1",
+    "react-transition-group": "2.3.1",
     "redux": "4.0.0",
-    "reselect": "^3.0.1",
+    "reselect": "3.0.1",
     "styled-components": "3.3.3"
   },
   "devDependencies": {
     "directory-named-webpack-plugin": "4.0.0",
-    "gatsby-plugin-styled-components": "2.0.11"
+    "why-did-you-update": "0.1.1"
   }
 }

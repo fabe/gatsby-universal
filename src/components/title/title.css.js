@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import styled from 'helpers/agnosticStyled';
 import MEDIA from 'helpers/mediaTemplates';
 
-export const Text = styled.div`
+export const Text = styled`
   font-weight: bold;
   font-size: 2.5rem;
 
