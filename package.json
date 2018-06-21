@@ -5,7 +5,8 @@
     "develop": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "ssr": "npm run build && npm run serve"
+    "ssr": "npm run build && npm run serve",
+    "prettier": "prettier --config ./.prettierrc --write src/**/*.js"
   },
   "dependencies": {
     "babel-plugin-styled-components": "1.5.1",
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "directory-named-webpack-plugin": "4.0.0",
+    "prettier": "^1.13.5",
     "why-did-you-update": "0.1.1"
   }
 }
