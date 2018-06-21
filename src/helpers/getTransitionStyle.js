@@ -12,10 +12,17 @@ const defaultTransitionStyles = timeout => ({
   },
 });
 
+const addInitialStyle = style => {
+  return {
+    ...style,
+    exited: style.entering,
+  };
+};
+
 const getTransitionStyle = ({
   styles = defaultTransitionStyles,
   timeout,
   status,
-}) => styles(timeout)[status];
+}) => addInitialStyle(styles(timeout))[status];
 
 export default getTransitionStyle;

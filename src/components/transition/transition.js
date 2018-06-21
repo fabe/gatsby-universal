@@ -1,5 +1,5 @@
 import React from 'react';
-import { Transition as ReactTransition } from 'react-transition-group';
+import ReactTransition from 'react-transition-group/Transition';
 import getTransitionStyle from 'helpers/getTransitionStyle';
 import { timeout, historyExitingEventType } from 'constants/transition';
 
