@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { StaticQuery } from 'gatsby';
-import { Helmet } from 'react-helmet';
+import Head from 'components/head';
 import Header from 'components/header';
 import Transition from 'components/transition';
 
@@ -9,10 +9,7 @@ import 'reset.css.js';
 
 const Layout = ({ data, children }) => (
   <div>
-    <Helmet>
-      <html lang="en" />
-      <title>{data.site.siteMetadata.title}</title>
-    </Helmet>
+    <Head {...data.site.siteMetadata} />
     <Header />
     <Transition>{children}</Transition>
   </div>

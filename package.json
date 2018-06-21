@@ -11,6 +11,7 @@
   "dependencies": {
     "babel-plugin-styled-components": "1.5.1",
     "gatsby": "next",
+    "gatsby-plugin-manifest": "^1.0.27",
     "gatsby-plugin-react-helmet": "^3.0.0-beta.2",
     "immutable": "^3.8.2",
     "prop-types": "15.6.2",
@@ -27,6 +28,7 @@
   },
   "devDependencies": {
     "directory-named-webpack-plugin": "4.0.0",
+    "favicons-webpack-plugin": "^0.0.9",
     "prettier": "^1.13.5",
     "why-did-you-update": "0.1.1"
   }

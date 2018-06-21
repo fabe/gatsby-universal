@@ -6,11 +6,6 @@ import { Provider } from 'react-redux';
 import createStore from 'store/createStore';
 import { timeout, historyExitingEventType } from 'constants/transition';
 
-if (process.env.NODE_ENV !== 'production') {
-  const { whyDidYouUpdate } = require('why-did-you-update');
-  whyDidYouUpdate(React);
-}
-
 // Redux
 export const replaceRouterComponent = ({ history }) => {
   const store = createStore();
