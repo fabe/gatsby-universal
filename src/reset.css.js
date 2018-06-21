@@ -32,6 +32,7 @@ injectGlobal`
   body {
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
     line-height: 1;
+    font-size: 1.6rem;
   }
   ol, ul {
     list-style: none;
