@@ -2,6 +2,8 @@ import React from 'react';
 import ReactTransition from 'react-transition-group/Transition';
 import getTransitionStyle from 'helpers/getTransitionStyle';
 import { timeout, historyExitingEventType } from 'constants/transition';
+import makeClassName from 'helpers/makeClassName';
+import toFallbackStyleString from 'helpers/toFallbackStyleString';
 
 class Transition extends React.Component {
   constructor(props) {
@@ -39,20 +41,38 @@ class Transition extends React.Component {
       in: !this.state.exiting,
     };
 
+    const noScriptClassName = makeClassName('noscript-');
+    const transitionStyles = getTransitionStyle({
+      styles: this.props.styles,
+      status,
+      timeout,
+    });
+
     return (
       <ReactTransition {...transitionProps}>
         {status => (
-          <div
-            style={{
-              ...getTransitionStyle({
-                styles: this.props.styles,
-                status,
-                timeout,
-              }),
-            }}
-          >
-            {this.props.children}
-          </div>
+          <>
+            <div
+              className={noScriptClassName}
+              style={{
+                ...transitionStyles,
+              }}
+            >
+              {this.props.children}
+            </div>
+
+            <noscript
+              dangerouslySetInnerHTML={{
+                __html: `
+                <style>
+                  .${noScriptClassName} {
+                    ${toFallbackStyleString(transitionStyles)}
+                  }
+                </style>
+            `,
+              }}
+            />
+          </>
         )}
       </ReactTransition>
     );
