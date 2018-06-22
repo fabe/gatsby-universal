@@ -1,8 +1,9 @@
 import React from 'react';
 import Layout from 'components/layout';
 import Box from 'components/box';
+import IO from 'components/io';
+import Footer from 'components/footer';
 import Modal from 'containers/modal';
-import IO from 'helpers/io';
 
 export default () => (
   <Layout>
@@ -10,8 +11,8 @@ export default () => (
       <Modal />
     </Box>
 
-    <div style={{ height: '150vh' }} />
+    <div style={{ height: '100vh' }} />
 
-    <IO />
+    <IO>{({ isVisible }) => <Footer isVisible={isVisible} />}</IO>
   </Layout>
 );
