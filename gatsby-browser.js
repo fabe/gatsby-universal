@@ -6,6 +6,11 @@ import { Provider } from 'react-redux';
 import createStore from 'store/createStore';
 import { timeout, historyExitingEventType } from 'constants/transition';
 
+// Intersection Observer polyfill
+if (typeof window !== `undefined` && window.IntersectionObserver) {
+  require('intersection-observer');
+}
+
 // Redux
 export const replaceRouterComponent = ({ history }) => {
   const store = createStore();

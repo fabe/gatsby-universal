@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import 'intersection-observer'; // polyfill
-
-// TODO observe going out as well if needed at least
 
 let io;
 const listeners = [];
