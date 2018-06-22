@@ -42,38 +42,36 @@ class Transition extends React.Component {
     };
 
     const noScriptClassName = makeClassName('noscript-');
-    const transitionStyles = getTransitionStyle({
-      styles: this.props.styles,
-      status,
-      timeout,
-    });
 
     return (
       <ReactTransition {...transitionProps}>
-        {status => (
-          <>
-            <div
-              className={noScriptClassName}
-              style={{
-                ...transitionStyles,
-              }}
-            >
-              {this.props.children}
-            </div>
+        {status => {
+          const transitionStyles = getTransitionStyle({
+            styles: this.props.styles,
+            status,
+            timeout,
+          });
 
-            <noscript
-              dangerouslySetInnerHTML={{
-                __html: `
+          return (
+            <>
+              <div style={transitionStyles} className={noScriptClassName}>
+                {this.props.children}
+              </div>
+
+              <noscript
+                dangerouslySetInnerHTML={{
+                  __html: `
                 <style>
                   .${noScriptClassName} {
                     ${toFallbackStyleString(transitionStyles)}
                   }
                 </style>
             `,
-              }}
-            />
-          </>
-        )}
+                }}
+              />
+            </>
+          );
+        }}
       </ReactTransition>
     );
   }
