@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 
+// Intersection Observer polyfill
+if (typeof window !== `undefined` && !window.IntersectionObserver) {
+  require('intersection-observer');
+}
+
 let io;
 const listeners = [];
 

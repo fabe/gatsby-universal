@@ -1,6 +1,8 @@
 const title = `Gatsby Redux Intro`;
 const shortTitle = `GatsbyRedux`;
 const themeColor = `#000`;
+const twitterUsername = `gatsbyjs`;
+const description = `A boilerplate for Gatsby X Redux.`;
 
 module.exports = {
   siteMetadata: {
