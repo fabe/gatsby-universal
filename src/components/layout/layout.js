@@ -29,6 +29,9 @@ const LayoutWithQuery = props => (
         site {
           siteMetadata {
             title
+            shortTitle
+            themeColor
+            description
           }
         }
       }

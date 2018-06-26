@@ -1,5 +1,5 @@
 const title = `Gatsby Universal`;
-const shortTitle = `GatsbyUniversal`;
+const shortTitle = `GatsbyU`;
 const themeColor = `#000`;
 const twitterUsername = `gatsbyjs`;
 const description = `A boilerplate for Gatsby X Redux.`;
@@ -9,6 +9,7 @@ module.exports = {
     title,
     shortTitle,
     themeColor,
+    description,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

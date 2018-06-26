@@ -5,7 +5,7 @@ import { Container } from './footer.css';
 export default props => (
   <IO>
     {({ isVisible }) => (
-      <Container isVisible={isVisible}>&copy; 2018 Thicc</Container>
+      <Container isVisible={isVisible}>&copy; 2018</Container>
     )}
   </IO>
 );
