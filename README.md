@@ -3,7 +3,6 @@
 A ~~simple~~ and *opinionated* setup for using Gatsby with Redux, styled-components, page transitions, IntersectionObserver.
 
 ```
-.
 ├── README.md
 ├── gatsby-browser.js
 ├── gatsby-config.js

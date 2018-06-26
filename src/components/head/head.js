@@ -63,7 +63,7 @@ export default ({
     <meta content="/mstile-310x150.png" name="msapplication-wide310x150" />
     <meta content="/mstile-310x310.png" name="msapplication-square310x310" />
 
-    <link href="/manifest.webmanifest" rel="manifest" />
+    <link href="manifest.webmanifest" rel="manifest" />
 
     <link href="/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" />
     <link href="/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" />
