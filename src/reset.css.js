@@ -10,8 +10,8 @@ injectGlobal`
   dl, dt, dd, ol, ul, li,
   fieldset, form, label, legend,
   table, caption, tbody, tfoot, thead, tr, th, td,
-  article, aside, canvas, details, embed, 
-  figure, figcaption, footer, header, hgroup, 
+  article, aside, canvas, details, embed,
+  figure, figcaption, footer, header, hgroup,
   menu, nav, output, ruby, section, summary,
   time, mark, audio, video {
     margin: 0;
@@ -21,9 +21,9 @@ injectGlobal`
     font: inherit;
     vertical-align: baseline;
   }
-  
+
   /* HTML5 display-role reset for older browsers */
-  article, aside, details, figcaption, figure, 
+  article, aside, details, figcaption, figure,
   footer, header, hgroup, menu, nav, section {
     display: block;
   }
@@ -41,7 +41,7 @@ injectGlobal`
   ol, ul {
     list-style: none;
   }
-  
+
   blockquote, q {
     quotes: none;
   }
@@ -55,5 +55,10 @@ injectGlobal`
   table {
     border-collapse: collapse;
     border-spacing: 0;
+  }
+
+  a {
+    color: #3818e5;
+    text-decoration: none;
   }
 `;

@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
+import { Dialog } from './modal.css';
 
-const Modal = ({ visible, showModal, hideModal }) => (
-  <div>
-    <button onClick={showModal}>Show</button>
-    <button onClick={hideModal}>Hide</button>
+export default class Modal extends PureComponent {
+  render() {
+    const { visible, showModal, hideModal } = this.props;
+    return (
+      <>
+        <button onClick={showModal}>Show</button>
+        <button onClick={hideModal}>Hide</button>
 
-    {visible ? 'Visible' : 'Hidden'}
-  </div>
-);
-
-export default Modal;
+        <Dialog open={visible}>
+          <video src="https://i.imgur.com/gzFqNSW.mp4" loop autoPlay muted />
+        </Dialog>
+      </>
+    );
+  }
+}

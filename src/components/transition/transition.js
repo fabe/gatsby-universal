@@ -46,15 +46,16 @@ class Transition extends React.Component {
     return (
       <ReactTransition {...transitionProps}>
         {status => {
-          const transitionStyles = getTransitionStyle({
-            styles: this.props.styles,
-            status,
-            timeout,
-          });
-
           return (
             <>
-              <div style={transitionStyles} className={noScriptClassName}>
+              <div
+                style={getTransitionStyle({
+                  styles: this.props.styles,
+                  status,
+                  timeout,
+                })}
+                className={noScriptClassName}
+              >
                 {this.props.children}
               </div>
 
@@ -63,7 +64,13 @@ class Transition extends React.Component {
                   __html: `
                 <style>
                   .${noScriptClassName} {
-                    ${toFallbackStyleString(transitionStyles)}
+                    ${toFallbackStyleString(
+                      getTransitionStyle({
+                        styles: this.props.styles,
+                        status: 'entered',
+                        timeout,
+                      })
+                    )}
                   }
                 </style>
             `,

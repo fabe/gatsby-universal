@@ -4,7 +4,6 @@ import { StaticQuery } from 'gatsby';
 import Head from 'components/head';
 import Header from 'components/header';
 import Transition from 'components/transition';
-import IO from 'components/io';
 import Footer from 'components/footer';
 
 import 'reset.css.js';
@@ -12,12 +11,10 @@ import 'reset.css.js';
 const Layout = ({ data, children }) => (
   <div>
     <Head {...data.site.siteMetadata} />
-    <Header />
+    <Header title={data.site.siteMetadata.title} />
     <Transition>{children}</Transition>
-
     <div style={{ height: '100vh' }} />
-
-    <IO>{({ isVisible }) => <Footer isVisible={isVisible} />}</IO>
+    <Footer />
   </div>
 );
 

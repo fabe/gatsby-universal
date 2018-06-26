@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-redux-intro",
+  "name": "gatsby-universal",
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
@@ -11,8 +11,9 @@
   "dependencies": {
     "babel-plugin-styled-components": "1.5.1",
     "gatsby": "next",
-    "gatsby-plugin-manifest": "^1.0.27",
-    "gatsby-plugin-react-helmet": "^3.0.0-beta.2",
+    "gatsby-plugin-manifest": "1.0.27",
+    "gatsby-plugin-offline": "^2.0.0-beta.2",
+    "gatsby-plugin-react-helmet": "3.0.0-beta.2",
     "immutable": "^3.8.2",
     "intersection-observer": "^0.5.0",
     "prop-types": "15.6.2",
@@ -26,7 +27,7 @@
     "redux-immutable": "^4.0.0",
     "reselect": "3.0.1",
     "styled-components": "3.3.3",
-    "to-style": "^1.3.3"
+    "to-style": "1.3.3"
   },
   "devDependencies": {
     "directory-named-webpack-plugin": "4.0.0",

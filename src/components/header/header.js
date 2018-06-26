@@ -20,11 +20,11 @@ const transitionStyles = timeout => ({
   },
 });
 
-const Header = () => (
+const Header = ({ title }) => (
   <Transition styles={transitionStyles}>
     <Container>
       <Link to="/">
-        <Title tag="h1">Gatsby Redux</Title>
+        <Title tag="h1">{title}</Title>
       </Link>
 
       <Nav />
