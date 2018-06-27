@@ -28,7 +28,7 @@ yarn prettier
 ![](https://i.imgur.com/jSG7hSz.png)
 
 ## Folder structure
-```
+```bash
 ├── README.md
 ├── gatsby-browser.js
 ├── gatsby-config.js
@@ -37,60 +37,28 @@ yarn prettier
 ├── package.json
 ├── src
 │   ├── actions
-│   │   └── modalActions.js
 │   ├── components
-│   │   ├── box
-│   │   │   ├── box.css.js
-│   │   │   └── box.js
-│   │   ├── footer
-│   │   │   ├── footer.css.js
-│   │   │   └── footer.js
-│   │   ├── head
+│   │   ├── head # All meta tags etc.
 │   │   │   └── head.js
-│   │   ├── header
-│   │   │   ├── header.css.js
-│   │   │   ├── header.js
-│   │   │   └── nav
-│   │   ├── io
+│   │   ├── io # Intersection Observer component, uses render props
 │   │   │   └── io.js
-│   │   ├── layout
+│   │   ├── layout # Layout component
 │   │   │   ├── layout.css.js
 │   │   │   └── layout.js
-│   │   ├── modal
-│   │   │   ├── modal.css.js
-│   │   │   └── modal.js
-│   │   ├── title
-│   │   │   ├── title.css.js
-│   │   │   └── title.js
-│   │   └── transition
+│   │   └── transition # Page Transition component, can be used with any other
 │   │       └── transition.js
 │   ├── constants
-│   │   ├── actionTypes.js
-│   │   ├── breakpoints.js
-│   │   └── transition.js
 │   ├── containers
-│   │   └── modal
-│   │       └── modal.js
 │   ├── helpers
-│   │   ├── agnosticStyled.js
-│   │   ├── getTransitionStyle.js
-│   │   ├── makeClassName.js
-│   │   ├── mediaTemplates.js
-│   │   └── toFallbackStyleString.js
+│   │   ├── agnosticStyled.js # Tag-agnostic styled-component
+│   │   ├── mediaTemplates.js # Creates media queries for styled-components
+│   │   └── toFallbackStyleString.js # Creates fallback styles for no-js page transitions
 │   ├── images
-│   │   └── icon.png
 │   ├── pages
-│   │   ├── 404.js
-│   │   ├── about.js
-│   │   └── index.js
 │   ├── reducers
-│   │   ├── index.js
-│   │   └── modal.js
-│   ├── reset.css.js
+│   ├── reset.css.js # Global CSS
 │   ├── selectors
-│   │   └── modalSelectors.js
 │   └── store
-│       └── createStore.js
 └── yarn.lock
 ```
 
