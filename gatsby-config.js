@@ -11,20 +11,5 @@ module.exports = {
     themeColor,
     description,
   },
-  plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-offline`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: title,
-        short_name: shortTitle,
-        start_url: '/',
-        background_color: '#fff',
-        theme_color: themeColor,
-        display: 'minimal-ui',
-        icon: 'src/images/icon.png',
-      },
-    },
-  ],
+  plugins: [`gatsby-plugin-react-helmet`, `gatsby-plugin-offline`],
 };

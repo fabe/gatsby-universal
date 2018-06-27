@@ -21,6 +21,9 @@ yarn ssr
 
 # To format JS (precommit)
 yarn prettier
+
+# To generate favicons (included in `build`)
+yarn favicons
 ```
 
 ## Lighthouse scores on Netlify

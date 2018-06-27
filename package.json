@@ -3,15 +3,15 @@
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
-    "build": "gatsby build",
+    "build": "gatsby build && npm run favicons",
     "serve": "gatsby serve",
     "ssr": "npm run build && npm run serve",
-    "prettier": "prettier --config ./.prettierrc --write src/**/*.js"
+    "prettier": "prettier --config ./.prettierrc --write src/**/*.js",
+    "favicons": "node scripts/favicons"
   },
   "dependencies": {
     "babel-plugin-styled-components": "1.5.1",
     "gatsby": "next",
-    "gatsby-plugin-manifest": "1.0.27",
     "gatsby-plugin-offline": "^2.0.0-beta.2",
     "gatsby-plugin-react-helmet": "3.0.0-beta.2",
     "immutable": "^3.8.2",
@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "directory-named-webpack-plugin": "4.0.0",
-    "favicons-webpack-plugin": "^0.0.9",
+    "favicons": "fabe/favicons",
     "prettier": "^1.13.5",
     "why-did-you-update": "0.1.1"
   }
