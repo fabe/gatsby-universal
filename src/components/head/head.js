@@ -128,12 +128,6 @@ export default ({
     />
 
     <link
-      href="/icons/icon-96x96.png"
-      rel="icon"
-      sizes="96x96"
-      type="image/png"
-    />
-    <link
       href="/icons/favicon-32x32.png"
       rel="icon"
       sizes="32x32"
