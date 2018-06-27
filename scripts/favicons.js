@@ -20,7 +20,7 @@ const configuration = {
   theme_color: '#fff',
   display: 'standalone',
   orientation: 'any',
-  start_url: '/',
+  start_url: '/index.html',
   version: '1.0',
   logging: true,
   icons: {
