@@ -43,7 +43,7 @@ yarn prettier
 │   │   ├── io # Intersection Observer component, uses render props
 │   │   │   └── io.js
 │   │   ├── layout # Layout component
-│   │   │   ├── layout.css.js
+│   │   │   ├── layout.css.js # .css.js for component's styled-components
 │   │   │   └── layout.js
 │   │   └── transition # Page Transition component, can be used with any other
 │   │       └── transition.js
