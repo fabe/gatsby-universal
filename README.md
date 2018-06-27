@@ -1,7 +1,33 @@
 # gatsby-universal
 
-A ~~simple~~ and *opinionated* setup for using Gatsby with Redux, styled-components, page transitions, IntersectionObserver.
+[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
+A ~~simple~~ and *opinionated* setup for using Gatsby v2 with Redux, tag-agnostic styled-components, page transitions, scroll events with `IntersectionObserver`.
+
+## Usage
+
+```bash
+# Installation
+gatsby new my-site https://github.com/fabe/gatsby-universal
+
+# To develop
+yarn develop
+
+# To build
+yarn build
+
+# To test SSR (for Lighthouse etc.)
+yarn ssr
+
+# To format JS (precommit)
+yarn prettier
+```
+
+## Lighthouse scores on Netlify
+
+![](https://i.imgur.com/jSG7hSz.png)
+
+## Folder structure
 ```
 ├── README.md
 ├── gatsby-browser.js
@@ -67,3 +93,7 @@ A ~~simple~~ and *opinionated* setup for using Gatsby with Redux, styled-compone
 │       └── createStore.js
 └── yarn.lock
 ```
+
+## Author
+
+* Fabian Schultz ([@fschultz\_](https://twitter.com/fschultz_)) - [Stink Studios](https://stinkstudios.com)
