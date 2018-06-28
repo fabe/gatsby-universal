@@ -1,4 +1,5 @@
 import { injectGlobal } from 'styled-components';
+import { accent } from 'constants/theme';
 
 injectGlobal`
   html, body, div, span, applet, object, iframe,
@@ -58,7 +59,22 @@ injectGlobal`
   }
 
   a {
-    color: #3818e5;
+    color: ${accent};
     text-decoration: none;
+  }
+
+  pre {
+    display: block;
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f6f8fa;
+    border-radius: 3px;
+    font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace;
+  }
+
+  video {
+    max-width: 100%;
   }
 `;

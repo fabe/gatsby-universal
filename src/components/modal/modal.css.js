@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { accent } from 'constants/theme';
 
 export const Dialog = styled.dialog`
   display: none;
@@ -17,14 +18,15 @@ export const Dialog = styled.dialog`
 
 export const Button = styled.button`
   -webkit-appearance: none;
-  background-color: #ccc;
+  background-color: ${accent};
   border-radius: 5px;
   border: none;
-  color: #333;
+  color: #fff;
   cursor: pointer;
   font-size: 1.6rem;
   font-weight: 500;
   padding: 1rem 2rem;
+  margin: 2rem 0;
 
   & + & {
     margin-left: 1rem;

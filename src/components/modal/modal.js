@@ -27,7 +27,7 @@ export default class Modal extends PureComponent {
 
     return (
       <>
-        <Button onClick={showModal}>Show</Button>
+        <Button onClick={showModal}>Show Modal</Button>
 
         <Dialog
           open={visible}
