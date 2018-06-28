@@ -34,7 +34,13 @@ export default class Modal extends PureComponent {
           onClick={hideModal}
           innerRef={modal => (this.modal = modal)}
         >
-          <video src="https://i.imgur.com/gzFqNSW.mp4" loop autoPlay muted />
+          <video
+            src="https://i.imgur.com/gzFqNSW.mp4"
+            playsInline
+            loop
+            autoPlay
+            muted
+          />
         </Dialog>
       </>
     );

@@ -4,8 +4,8 @@ import Title from 'components/title';
 import { Container } from './stopper.css';
 
 export default () => (
-  <IO rootMargin="-100px">
-    {({ isVisible }) => (
+  <IO rootMargin="-50px">
+    {({ isVisible, hasBeenVisible }) => (
       <Container isVisible={isVisible}>
         <Title>IntersectionObserver</Title>
       </Container>

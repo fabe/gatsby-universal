@@ -25,6 +25,7 @@ export const Button = styled.button`
   cursor: pointer;
   font-size: 1.6rem;
   font-weight: 500;
+  font-family: inherit;
   padding: 1rem 2rem;
   margin: 2rem 0;
 
