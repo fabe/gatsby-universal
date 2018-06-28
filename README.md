@@ -2,7 +2,7 @@
 
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
-A ~~simple~~ and *opinionated* setup for using Gatsby v2 with Redux, tag-agnostic styled-components, page transitions, scroll events with `IntersectionObserver`.
+An *opinionated* starter for using Gatsby v2 with Redux, tag-agnostic styled-components, page transitions, scroll events with `IntersectionObserver`.
 
 ## Usage
 
