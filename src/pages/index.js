@@ -9,8 +9,8 @@ export default () => (
   <Layout>
     <Box>
       <Title tag="h2">
-        An opinionated starter for using Gatsby v2 with React Context,
-        tag-agnostic styled-components, page transitions and scroll events with
+        An opinionated starter for using Gatsby v2 with Redux, tag-agnostic
+        styled-components, page transitions and scroll events with
         IntersectionObserver.
       </Title>
       <Modal />
