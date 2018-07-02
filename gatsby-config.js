@@ -11,5 +11,15 @@ module.exports = {
     themeColor,
     description,
   },
-  plugins: [`gatsby-plugin-react-helmet`, `gatsby-plugin-offline`],
+  plugins: [
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-offline`,
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./src/content/`,
+      },
+    },
+  ],
 };

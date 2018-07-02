@@ -4,8 +4,9 @@ import Box from 'components/box';
 import Title from 'components/title';
 import Stopper from 'components/stopper';
 import Modal from 'containers/modal';
+import { graphql } from 'gatsby';
 
-export default () => (
+export default ({ data }) => (
   <Layout>
     <Box>
       <Title tag="h2">
@@ -19,3 +20,12 @@ export default () => (
     <Stopper />
   </Layout>
 );
+
+export const query = graphql`
+  query HomepageQuery {
+    contentJson {
+      title
+      content
+    }
+  }
+`;
