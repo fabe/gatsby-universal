@@ -12,26 +12,28 @@ export default class Modal extends PureComponent {
 
   onEscape = ({ key }) => {
     if (key === 'Escape') {
-      this.props.hideModal();
+      this.props.visible && this.props.toggleModal();
       this.modal.close();
     }
   };
 
   render() {
-    const { visible, showModal, hideModal } = this.props;
+    const { visible, toggleModal } = this.props;
     if (this.modal && visible) {
       this.modal.showModal();
     } else if (this.modal && !visible) {
       this.modal.close();
     }
 
+    console.log(this.props);
+
     return (
       <>
-        <Button onClick={showModal}>Show Modal</Button>
+        <Button onClick={toggleModal}>Show Modal</Button>
 
         <Dialog
           open={visible}
-          onClick={hideModal}
+          onClick={toggleModal}
           innerRef={modal => (this.modal = modal)}
         >
           <video

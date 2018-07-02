@@ -2,7 +2,7 @@
 
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
-An *opinionated* starter for using Gatsby v2 with Redux, tag-agnostic styled-components, page transitions, scroll events with `IntersectionObserver`.
+An *opinionated* starter for using Gatsby v2 with React Context, tag-agnostic styled-components, page transitions, scroll events with `IntersectionObserver`.
 
 ## Usage
 
@@ -39,7 +39,6 @@ yarn favicons
 ├── gatsby-ssr.js
 ├── package.json
 ├── src
-│   ├── actions
 │   ├── components
 │   │   ├── head # All meta tags etc.
 │   │   │   └── head.js
@@ -58,9 +57,7 @@ yarn favicons
 │   │   └── toFallbackStyleString.js # Creates fallback styles for no-js page transitions
 │   ├── images
 │   ├── pages
-│   ├── reducers
 │   ├── reset.css.js # Global CSS
-│   ├── selectors
 │   └── store
 └── yarn.lock
 ```

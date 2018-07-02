@@ -2,18 +2,14 @@
 import React from 'react';
 import { Router } from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
-import { Provider } from 'react-redux';
-import createStore from 'store/createStore';
+import AppProvider from 'store/provider';
 import { timeout, historyExitingEventType } from 'constants/transition';
 
-// Redux
 export const replaceRouterComponent = ({ history }) => {
-  const store = createStore();
-
   const ConnectedRouterWrapper = ({ children }) => (
-    <Provider store={store}>
+    <AppProvider>
       <Router history={history}>{children}</Router>
-    </Provider>
+    </AppProvider>
   );
 
   return ConnectedRouterWrapper;
