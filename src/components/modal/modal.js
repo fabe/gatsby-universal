@@ -25,8 +25,6 @@ export default class Modal extends PureComponent {
       this.modal.close();
     }
 
-    console.log(this.props);
-
     return (
       <>
         <Button onClick={toggleModal}>Show Modal</Button>

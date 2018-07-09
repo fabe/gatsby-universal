@@ -3,7 +3,7 @@
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
-    "build": "gatsby build && npm run favicons",
+    "build": "npm run favicons && gatsby build",
     "serve": "gatsby serve",
     "ssr": "npm run build && npm run serve",
     "prettier": "prettier --config ./.prettierrc --write src/**/*.js",
