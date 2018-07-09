@@ -28,7 +28,7 @@ yarn favicons
 
 ## Lighthouse scores on Netlify
 
-![](https://i.imgur.com/jSG7hSz.png)
+![](https://i.imgur.com/9eaP682.png)
 
 ## Folder structure
 ```bash
