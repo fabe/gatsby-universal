@@ -56,7 +56,7 @@ Find the site-wide configuration in `site-config.js`.
 module.exports = {
   siteTitle: `Gatsby Universal`,
   siteTitleShort: `GatsbyU`,
-  siteDescription: `A boilerplate for Gatsby X Redux.`,
+  siteDescription: `An opinionated starter for Gatsby.`,
   siteUrl: `https://gu.fabianschultz.com`,
   themeColor: `#000`,
   backgroundColor: `#fff`,
