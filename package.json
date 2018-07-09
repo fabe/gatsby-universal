@@ -3,7 +3,8 @@
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
-    "build": "npm run favicons && gatsby build",
+    "mkdir": "mkdir public/ mkdir public/icons/",
+    "build": "npm run mkdir && npm run favicons && gatsby build",
     "serve": "gatsby serve",
     "ssr": "npm run build && npm run serve",
     "prettier": "prettier --config ./.prettierrc --write src/**/*.js",
