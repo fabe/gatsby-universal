@@ -1,6 +1,6 @@
 # gatsby-universal
 
-[![CircleCI](https://circleci.com/gh/fabe/gatsby-universal.svg?style=svg)](https://circleci.com/gh/fabe/gatsby-universal) [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![CircleCI](https://circleci.com/gh/fabe/gatsby-universal.svg?style=svg)](https://circleci.com/gh/fabe/gatsby-universal) [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier) [![deploys by netlify](https://img.shields.io/badge/deploys%20by-netlify-00c7b7.svg)](https://www.netlify.com)
 
 An *opinionated* starter for using Gatsby v2 with React Context, tag-agnostic styled-components, page transitions, scroll events with `IntersectionObserver`. Made for state of the art marketing sites.
 
@@ -20,6 +20,7 @@ An *opinionated* starter for using Gatsby v2 with React Context, tag-agnostic st
 - [X] 🗺 Sitemap support
 - [X] 📱 Generated media queries for easy use
 - [X] 😎 Prettier for code style
+- [X] 👷‍♂️ CircleCI support
 - [ ] 🐙 Schema JSONLD
 
 ## Lighthouse scores (on Netlify)
