@@ -1,6 +1,6 @@
 # gatsby-universal
 
-[![CircleCI](https://circleci.com/gh/fabe/gatsby-universal.svg?style=svg)](https://circleci.com/gh/fabe/gatsby-universal)[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![CircleCI](https://circleci.com/gh/fabe/gatsby-universal.svg?style=svg)](https://circleci.com/gh/fabe/gatsby-universal) [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 An *opinionated* starter for using Gatsby v2 with React Context, tag-agnostic styled-components, page transitions, scroll events with `IntersectionObserver`. Made for state of the art marketing sites.
 
