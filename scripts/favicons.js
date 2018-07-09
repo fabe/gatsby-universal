@@ -2,22 +2,24 @@ const favicons = require('favicons');
 const path = require('path');
 const fs = require('fs');
 
+const { siteTitle, themeColor, backgroundColor } = require('../site-config');
+
 const dir = path.resolve(__dirname, '../public/icons/');
 if (!fs.existsSync(dir)) {
-   fs.mkdirSync(dir);
+  fs.mkdirSync(dir);
 }
 
 const source = 'src/images/icon.png';
 const configuration = {
   path: '/icons/',
-  appName: 'Universal',
+  appName: siteTitle,
   appDescription: null,
   developerName: null,
   developerURL: null,
   dir: 'auto',
   lang: 'en-US',
-  background: '#fff',
-  theme_color: '#fff',
+  background: backgroundColor,
+  theme_color: themeColor,
   display: 'standalone',
   orientation: 'any',
   start_url: '/',

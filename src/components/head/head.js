@@ -4,10 +4,11 @@ import { Helmet } from 'react-helmet';
 // @TODO Still needs the canonical URLs, probably need to pass from pages to <Layout>
 
 export default ({
-  title,
-  description,
+  siteTitle,
+  siteTitleShort,
+  siteDescription,
   themeColor,
-  twitterUsername,
+  social,
   canonical,
 }) => (
   <Helmet>
@@ -19,14 +20,14 @@ export default ({
       name="viewport"
     />
 
-    <meta content={title} name="apple-mobile-web-app-title" />
-    <meta content={title} property="og:title" />
-    <meta content={title} name="twitter:title" />
-    <title>{title}</title>
+    <meta content={siteTitle} name="apple-mobile-web-app-title" />
+    <meta content={siteTitle} property="og:title" />
+    <meta content={siteTitle} name="twitter:title" />
+    <title>{siteTitle}</title>
 
-    <meta content={description} name="description" />
-    <meta content={description} property="og:description" />
-    <meta content={description} name="twitter:description" />
+    <meta content={siteDescription} name="description" />
+    <meta content={siteDescription} property="og:description" />
+    <meta content={siteDescription} name="twitter:description" />
 
     <meta content="yes" name="apple-mobile-web-app-capable" />
     <meta
@@ -34,13 +35,13 @@ export default ({
       name="apple-mobile-web-app-status-bar-style"
     />
     <meta content={themeColor} name="theme-color" />
-    <meta content={title} name="application-name" />
+    <meta content={siteTitle} name="application-name" />
 
-    <meta content={title} property="og:site_name" />
+    <meta content={siteTitle} property="og:site_name" />
     <meta content="summary_large_image" name="twitter:card" />
-    <meta content={`@${twitterUsername}`} name="twitter:site" />
-    <meta content={`@${twitterUsername}`} name="twitter:creator" />
-    <meta content={title} name="twitter:text:title" />
+    <meta content={`@${social.twitter}`} name="twitter:site" />
+    <meta content={`@${social.twitter}`} name="twitter:creator" />
+    <meta content={siteTitle} name="twitter:text:title" />
     <meta content={canonical} property="og:url" />
     <meta content={canonical} name="twitter:url" />
 

@@ -10,7 +10,7 @@ import 'reset.css.js';
 const Layout = ({ data, children }) => (
   <div>
     <Head {...data.site.siteMetadata} />
-    <Header title={data.site.siteMetadata.title} />
+    <Header title={data.site.siteMetadata.siteTitle} />
     <Transition>{children}</Transition>
   </div>
 );
@@ -25,10 +25,13 @@ const LayoutWithQuery = props => (
       query LayoutQuery {
         site {
           siteMetadata {
-            title
-            shortTitle
+            siteTitle
+            siteTitleShort
+            siteDescription
             themeColor
-            description
+            social {
+              twitter
+            }
           }
         }
       }

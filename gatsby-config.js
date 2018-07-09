@@ -1,18 +1,24 @@
-const title = `Gatsby Universal`;
-const shortTitle = `GatsbyU`;
-const themeColor = `#000`;
-const twitterUsername = `gatsbyjs`;
-const description = `A boilerplate for Gatsby X Redux.`;
+const {
+  siteTitle,
+  siteTitleShort,
+  siteDescription,
+  siteUrl,
+  themeColor,
+  social,
+} = require('./site-config');
 
 module.exports = {
   siteMetadata: {
-    title,
-    shortTitle,
+    siteTitle,
+    siteTitleShort,
+    siteDescription,
+    siteUrl,
     themeColor,
-    description,
+    social,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-offline`,
     `gatsby-transformer-json`,
     {
