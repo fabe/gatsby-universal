@@ -48,7 +48,7 @@ const Head = ({
     <meta content={siteTitle} name="twitter:text:title" />
     <meta content={canonical} property="og:url" />
     <meta content={canonical} name="twitter:url" />
-    <link rel="canonical" href="canonical" />
+    <link rel="canonical" href={canonical} />
 
     <meta content={imageUrl || `${siteUrl}/social.png`} property="og:image" />
     <meta content="1024" property="og:image:width" />
