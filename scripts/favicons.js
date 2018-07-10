@@ -2,7 +2,11 @@ const favicons = require('favicons');
 const path = require('path');
 const fs = require('fs');
 
-const { siteTitle, themeColor, backgroundColor } = require('../site-config');
+const {
+  siteTitleShort,
+  themeColor,
+  backgroundColor,
+} = require('../site-config');
 
 const dir = path.resolve(__dirname, '../public/icons/');
 if (!fs.existsSync(dir)) {
@@ -12,7 +16,7 @@ if (!fs.existsSync(dir)) {
 const source = 'src/images/icon.png';
 const configuration = {
   path: '/icons/',
-  appName: siteTitle,
+  appName: siteTitleShort,
   appDescription: null,
   developerName: null,
   developerURL: null,
