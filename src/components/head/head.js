@@ -11,6 +11,7 @@ const Head = ({
   siteUrl,
   themeColor,
   social,
+  imageUrl,
   location,
   canonical = siteUrl + location.pathname + location.search,
 }) => (
@@ -47,16 +48,17 @@ const Head = ({
     <meta content={siteTitle} name="twitter:text:title" />
     <meta content={canonical} property="og:url" />
     <meta content={canonical} name="twitter:url" />
+    <link rel="canonical" href="canonical" />
 
-    <meta content={canonical} property="og:image" />
+    <meta content={imageUrl || `${siteUrl}/social.png`} property="og:image" />
     <meta content="1024" property="og:image:width" />
     <meta content="512" property="og:image:height" />
-    <meta content={canonical} name="twitter:image" />
+    <meta content={imageUrl || `${siteUrl}/social.png`} name="twitter:image" />
     <meta content="1024" name="twitter:image:width" />
     <meta content="512" name="twitter:image:height" />
-    <meta content={canonical} property="og:image" />
-    <meta content="800" property="og:image:width" />
-    <meta content="1200" property="og:image:height" />
+    <meta content={imageUrl || `${siteUrl}/social.png`} property="og:image" />
+    <meta content="1024" property="og:image:width" />
+    <meta content="512" property="og:image:height" />
 
     <meta content={themeColor} name="msapplication-TileColor" />
     <meta content="/icons/mstile-70x70.png" name="msapplication-square70x70" />
