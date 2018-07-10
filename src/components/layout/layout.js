@@ -32,6 +32,7 @@ const LayoutWithQuery = props => (
             themeColor
             social {
               twitter
+              fbAppId
             }
           }
         }
