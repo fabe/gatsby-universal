@@ -28,6 +28,7 @@ const LayoutWithQuery = props => (
             siteTitle
             siteTitleShort
             siteDescription
+            siteUrl
             themeColor
             social {
               twitter

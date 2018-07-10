@@ -1,15 +1,18 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { withRouter } from 'react-router';
 
 // @TODO Still needs the canonical URLs, probably need to pass from pages to <Layout>
 
-export default ({
+const Head = ({
   siteTitle,
   siteTitleShort,
   siteDescription,
+  siteUrl,
   themeColor,
   social,
-  canonical,
+  location,
+  canonical = siteUrl + location.pathname + location.search,
 }) => (
   <Helmet>
     <html lang="en" />
@@ -142,3 +145,5 @@ export default ({
     />
   </Helmet>
 );
+
+export default withRouter(Head);
