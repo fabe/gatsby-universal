@@ -7,6 +7,6 @@ export const Text = styled`
   line-height: 1.2;
 
   ${MEDIA.PHONE`
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   `};
 `;

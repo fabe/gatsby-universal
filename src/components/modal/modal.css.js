@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { accent } from 'constants/theme';
+import MEDIA from 'helpers/mediaTemplates';
 
 export const Dialog = styled.dialog`
   display: none;
@@ -32,4 +33,8 @@ export const Button = styled.button`
   & + & {
     margin-left: 1rem;
   }
+
+  ${MEDIA.PHONE`
+    font-size: 1.4rem;
+  `};
 `;

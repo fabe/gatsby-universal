@@ -1,4 +1,19 @@
 {
-  "title": "Homepage",
-  "content": "# MDX"
+  "title": "Home",
+  "content": "An opinionated starter for using Gatsby v2 with React Context, tag-agnostic styled-components, page transitions and scroll events with IntersectionObserver.",
+  "gallery": [{
+    "title": "React Context",
+    "copy": "For global styles.",
+    "image": "../images/gallery/react-context.jpg"
+  },
+  {
+    "title": "Page Transitions",
+    "copy": "Component-based for easy usage.",
+    "image": "../images/gallery/page-transitions.jpg"
+  },
+  {
+    "title": "Intersection Observer",
+    "copy": "Including a polyfill for Safari.",
+    "image": "../images/gallery/intersection-observer.jpg"
+  }]
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from 'components/layout';
 import Box from 'components/box';
 import Title from 'components/title';
+import Gallery from 'components/gallery';
 import Stopper from 'components/stopper';
 import Modal from 'containers/modal';
 import { graphql } from 'gatsby';
@@ -9,14 +10,11 @@ import { graphql } from 'gatsby';
 export default ({ data }) => (
   <Layout>
     <Box>
-      <Title tag="h2">
-        An opinionated starter for using Gatsby v2 with React Context,
-        tag-agnostic styled-components, page transitions and scroll events with
-        IntersectionObserver.
-      </Title>
+      <Title tag="span">{data.contentJson.content}</Title>
       <Modal />
     </Box>
-    <div style={{ height: '100vh' }} />
+    <Gallery items={data.contentJson.gallery} />
+    <div style={{ height: '50vh' }} />
     <Stopper />
   </Layout>
 );
@@ -26,6 +24,17 @@ export const query = graphql`
     contentJson {
       title
       content
+      gallery {
+        title
+        copy
+        image {
+          childImageSharp {
+            fluid(maxHeight: 500, quality: 90) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
     }
   }
 `;
