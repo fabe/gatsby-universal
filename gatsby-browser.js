@@ -19,10 +19,10 @@ export const replaceRouterComponent = ({ history }) => {
 const getUserConfirmation = (pathname, callback) => {
   // Check if user wants to navigate to the same page.
   // https://github.com/ReactTraining/history/pull/570
-  if (pathname === window.location.pathname) {
-    callback(false);
-    return false;
-  }
+  // if (pathname === window.location.pathname) {
+  //   callback(false);
+  //   return false;
+  // }
 
   const event = new CustomEvent(historyExitingEventType, {
     detail: { pathname },
