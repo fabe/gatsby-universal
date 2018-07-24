@@ -14,6 +14,10 @@ class Transition extends React.Component {
 
   listenerHandler(event) {
     this.setState({ exiting: true });
+
+    setTimeout(() => {
+      this.setState({ exiting: false });
+    }, timeout);
   }
 
   componentDidMount() {
@@ -22,13 +26,6 @@ class Transition extends React.Component {
 
   componentWillUnmount() {
     window.removeEventListener(historyExitingEventType, this.listenerHandler);
-  }
-
-  static getDerivedStateFromProps({ exiting }) {
-    if (exiting) {
-      return { exiting: false };
-    }
-    return null;
   }
 
   render() {
