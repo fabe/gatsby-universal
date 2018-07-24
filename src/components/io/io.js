@@ -41,8 +41,10 @@ function getIO(rootMargin = `-50px`) {
 }
 
 const listenToIntersections = (el, cb, rm) => {
-  getIO(rm).observe(el);
+  const io = getIO(rm);
+  io.observe(el);
   listeners.push([el, cb]);
+  return io;
 };
 
 export default class extends Component {
@@ -75,7 +77,7 @@ export default class extends Component {
 
   handleRef = ref => {
     if (this.state.IOSupported && ref) {
-      listenToIntersections(
+      this.io = listenToIntersections(
         ref,
         isVisible => {
           this.setState(state => {
@@ -92,6 +94,10 @@ export default class extends Component {
       );
     }
   };
+
+  componentWillUnmount() {
+    this.io.disconnect();
+  }
 
   render() {
     const { isVisible, hasBeenVisible } = this.state;
