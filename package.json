@@ -5,7 +5,7 @@
     "develop": "gatsby develop",
     "serve": "gatsby serve",
     "ssr": "npm run build && npm run serve",
-    "prettier": "prettier --config ./.prettierrc --write src/**/*.js",
+    "format": "prettier --config ./.prettierrc --write src/**/*.js",
     "build:dir": "mkdir -p public/icons/",
     "build:favicons": "node scripts/favicons",
     "build": "npm run build:dir && npm run build:favicons && gatsby build"
