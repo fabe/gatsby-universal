@@ -1,6 +1,9 @@
 import React, { PureComponent } from 'react';
 import { Dialog, Button } from './modal.css';
 
+// This component is here only to to showcase the
+// React Context integration. There are probably a
+// lot of much better Modal components available.
 export default class Modal extends PureComponent {
   componentDidMount() {
     window.addEventListener('keydown', this.onEscape);
@@ -13,16 +16,27 @@ export default class Modal extends PureComponent {
   onEscape = ({ key }) => {
     if (key === 'Escape') {
       this.props.visible && this.props.toggleModal();
-      this.modal.close();
     }
   };
 
+  disableScrolling(visible) {
+    // TODO This is probably not good practice.
+    // Putting it into the store sounds fishy as well, though.
+    // Disables scrolling when the modal is open.
+    if (visible) {
+      document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = null;
+      document.documentElement.style.overflow = null;
+    }
+  }
+
   render() {
     const { visible, toggleModal } = this.props;
-    if (this.modal && visible) {
-      this.modal.showModal();
-    } else if (this.modal && !visible) {
-      this.modal.close();
+
+    if (typeof document !== `undefined`) {
+      this.disableScrolling(visible);
     }
 
     return (
@@ -30,7 +44,7 @@ export default class Modal extends PureComponent {
         <Button onClick={toggleModal}>Show Modal</Button>
 
         <Dialog
-          open={visible}
+          aria-hidden={!visible}
           onClick={toggleModal}
           innerRef={modal => (this.modal = modal)}
         >
