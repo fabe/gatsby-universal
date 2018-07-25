@@ -34,6 +34,7 @@
   "devDependencies": {
     "directory-named-webpack-plugin": "4.0.0",
     "favicons": "^5.1.1",
+    "node-gyp": "^3.7.0",
     "prettier": "^1.13.5",
     "why-did-you-update": "0.1.1"
   }
