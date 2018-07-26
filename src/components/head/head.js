@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { withRouter } from 'react-router';
 
@@ -149,5 +150,17 @@ const Head = ({
     />
   </Helmet>
 );
+
+Head.propTypes = {
+  siteTitle: PropTypes.string,
+  siteTitleShort: PropTypes.string,
+  siteDescription: PropTypes.string,
+  siteUrl: PropTypes.string,
+  themeColor: PropTypes.string,
+  social: PropTypes.objectOf(PropTypes.string),
+  imageUrl: PropTypes.string,
+  location: PropTypes.objectOf(PropTypes.string).isRequired,
+  canonical: PropTypes.string,
+};
 
 export default withRouter(Head);

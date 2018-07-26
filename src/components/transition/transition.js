@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ReactTransition from 'react-transition-group/Transition';
 import getTransitionStyle from 'helpers/getTransitionStyle';
 import { timeout, historyExitingEventType } from 'constants/transition';
@@ -80,5 +81,10 @@ class Transition extends React.Component {
     );
   }
 }
+
+Transition.propTypes = {
+  children: PropTypes.node.isRequired,
+  styles: PropTypes.func,
+};
 
 export default Transition;

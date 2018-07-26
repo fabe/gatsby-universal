@@ -17,6 +17,7 @@ const Layout = ({ data, children }) => (
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  data: PropTypes.object.isRequired,
 };
 
 const LayoutWithQuery = props => (
@@ -41,5 +42,9 @@ const LayoutWithQuery = props => (
     render={data => <Layout data={data} {...props} />}
   />
 );
+
+LayoutWithQuery.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 export default LayoutWithQuery;

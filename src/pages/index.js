@@ -11,7 +11,15 @@ export default ({ data }) => (
   <Layout>
     <Box>
       <Title tag="span">{data.contentJson.content}</Title>
-      <Modal />
+      <Modal>
+        <video
+          src="https://i.imgur.com/gzFqNSW.mp4"
+          playsInline
+          loop
+          autoPlay
+          muted
+        />
+      </Modal>
     </Box>
     <Gallery items={data.contentJson.gallery} />
     <div style={{ height: '50vh' }} />

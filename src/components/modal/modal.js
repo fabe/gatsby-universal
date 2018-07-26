@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import { Dialog, Button } from './modal.css';
 
 // This component is here only to to showcase the
@@ -33,7 +34,7 @@ export default class Modal extends PureComponent {
   }
 
   render() {
-    const { visible, toggleModal } = this.props;
+    const { children, visible, toggleModal } = this.props;
 
     if (typeof document !== `undefined`) {
       this.disableScrolling(visible);
@@ -48,15 +49,15 @@ export default class Modal extends PureComponent {
           onClick={toggleModal}
           innerRef={modal => (this.modal = modal)}
         >
-          <video
-            src="https://i.imgur.com/gzFqNSW.mp4"
-            playsInline
-            loop
-            autoPlay
-            muted
-          />
+          {children}
         </Dialog>
       </>
     );
   }
 }
+
+Modal.propTypes = {
+  children: PropTypes.node,
+  visible: PropTypes.bool.isRequired,
+  toggleModal: PropTypes.func,
+};

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 // Intersection Observer polyfill
 if (typeof window !== `undefined` && !window.IntersectionObserver) {
@@ -47,7 +48,7 @@ const listenToIntersections = (el, cb, rm) => {
   return io;
 };
 
-export default class extends Component {
+export default class IO extends Component {
   constructor() {
     super();
 
@@ -109,3 +110,8 @@ export default class extends Component {
     );
   }
 }
+
+IO.propTypes = {
+  children: PropTypes.func.isRequired,
+  rootMargin: PropTypes.string,
+};
