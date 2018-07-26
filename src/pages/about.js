@@ -18,10 +18,10 @@ yarn build
 yarn ssr
 
 # To format JS (precommit)
-yarn prettier
+yarn format
 
 # To generate favicons (included in \`build\`)
-yarn favicons
+yarn build:favicons
 `}</pre>
     </Box>
   </Layout>

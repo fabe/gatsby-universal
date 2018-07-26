@@ -19,6 +19,8 @@ const addInitialStyle = style => {
   };
 };
 
+// This function returns the correct transitions styles
+// based on the given timeout and state (entering, etc.).
 const getTransitionStyle = ({
   styles = defaultTransitionStyles,
   timeout,

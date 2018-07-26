@@ -1,3 +1,6 @@
+// This helper function can be used to create random class
+// names. It's used for generating no-js class names for
+// the transitions.
 export default (prefix = '') => {
   let name = '';
   const possible = 'ABCEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyz';
