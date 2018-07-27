@@ -5,7 +5,7 @@ jobs:
       only:
         - master
     docker:
-      - image: circleci/node:8.11
+      - image: circleci/node:8.11-browsers
     working_directory: ~/repo
     steps:
       - checkout
@@ -25,7 +25,7 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # Run tests
-      # - run: yarn test
+      - run: yarn test
       - run: yarn build
       # - deploy:
       #     command: |

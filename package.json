@@ -8,7 +8,8 @@
     "format": "prettier --config ./.prettierrc --write src/**/*.js",
     "build:dir": "mkdir -p public/icons/",
     "build:favicons": "node scripts/favicons",
-    "build": "npm run build:dir && npm run build:favicons && gatsby build"
+    "build": "npm run build:dir && npm run build:favicons && gatsby build",
+    "test": "ava **/*.test.js --verbose"
   },
   "dependencies": {
     "babel-plugin-styled-components": "1.5.1",
@@ -32,8 +33,11 @@
     "to-style": "1.3.3"
   },
   "devDependencies": {
+    "ava": "^1.0.0-beta.6",
+    "chrome-launcher": "^0.10.2",
     "directory-named-webpack-plugin": "4.0.0",
     "favicons": "^5.1.1",
+    "lighthouse": "^3.0.3",
     "node-gyp": "^3.7.0",
     "prettier": "^1.13.5",
     "why-did-you-update": "0.1.1"

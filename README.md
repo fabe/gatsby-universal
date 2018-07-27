@@ -25,7 +25,7 @@ An *opinionated* starter for using Gatsby v2 with React Context, tag-agnostic st
 
 ## Lighthouse scores (on Netlify)
 
-![Lighthouse scores (on Netlify)](https://lighthouse.now.sh/?perf=98&pwa=100&a11y=100&bp=100&seo=100)
+[![Lighthouse scores (on Netlify)](https://lighthouse.now.sh/?perf=100&pwa=100&a11y=100&bp=100&seo=100)](https://circleci.com/gh/fabe/gatsby-universal)
 
 ## Usage
 
