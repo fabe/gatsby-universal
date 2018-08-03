@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-// Intersection Observer polyfill
-if (typeof window !== `undefined` && !window.IntersectionObserver) {
-  require('intersection-observer');
-}
-
 let io;
 const listeners = [];
 
@@ -52,47 +47,65 @@ export default class IO extends Component {
   constructor() {
     super();
 
-    // If this browser doesn't support the IntersectionObserver API.
+    // Always not visible while server rendering.
+    this.state = {
+      isVisible: false,
+      hasBeenVisible: false,
+      IOSupported: false,
+    };
+  }
+
+  async componentDidMount() {
+    // Default values
     let isVisible = true;
     let hasBeenVisible = true;
     let IOSupported = false;
 
+    // Intersection Observer polyfill
+    if (typeof window !== `undefined` && !window.IntersectionObserver) {
+      await import('intersection-observer').then(() => {
+        console.log(`IntersectionObserver polyfill injected.`);
+      });
+    }
+
+    // Check if browser (now) supports IntersectionObserver
     if (typeof window !== `undefined` && window.IntersectionObserver) {
       isVisible = false;
       hasBeenVisible = false;
       IOSupported = true;
     }
 
-    // Always not visible while server rendering,
-    if (typeof window === `undefined`) {
-      isVisible = false;
-      hasBeenVisible = false;
-    }
-
-    this.state = {
-      isVisible,
-      hasBeenVisible,
-      IOSupported,
-    };
+    this.setState(
+      {
+        isVisible,
+        hasBeenVisible,
+        IOSupported,
+      },
+      this.listenToIntersections
+    );
   }
 
+  listenToIntersections = () => {
+    this.io = listenToIntersections(
+      this.ref,
+      isVisible => {
+        this.setState(state => {
+          let newState = {};
+
+          if (!state.hasBeenVisible && isVisible) {
+            newState = { hasBeenVisible: true };
+          }
+
+          return { isVisible, ...newState };
+        });
+      },
+      this.props.rootMargin
+    );
+  };
+
   handleRef = ref => {
-    if (this.state.IOSupported && ref) {
-      this.io = listenToIntersections(
-        ref,
-        isVisible => {
-          this.setState(state => {
-            let newState = {};
-
-            if (!state.hasBeenVisible && isVisible) {
-              newState = { hasBeenVisible: true };
-            }
-
-            return { isVisible, ...newState };
-          });
-        },
-        this.props.rootMargin
-      );
+    if (ref) {
+      this.ref = ref;
     }
   };
 
