@@ -12,6 +12,7 @@
     "test": "ava **/*.test.js --verbose"
   },
   "dependencies": {
+    "@reach/router": "^1.1.1",
     "babel-plugin-styled-components": "1.5.1",
     "gatsby": "^2.0.0-beta.38",
     "gatsby-image": "^2.0.0-beta.4",
