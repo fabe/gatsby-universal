@@ -2,13 +2,13 @@
 
 [![CircleCI](https://circleci.com/gh/fabe/gatsby-universal.svg?style=svg)](https://circleci.com/gh/fabe/gatsby-universal) [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier) [![deploys by netlify](https://img.shields.io/badge/deploys%20by-netlify-00c7b7.svg)](https://www.netlify.com)
 
-An *opinionated* starter for using Gatsby v2 with React Context, tag-agnostic styled-components, page transitions, scroll events with `IntersectionObserver`. Made for state-of-the-art marketing sites.
+An *opinionated* starter for using Gatsby v2 with React Context, tag-agnostic styled-components, ~~page transitions~~, scroll events with `IntersectionObserver`. Made for state-of-the-art marketing sites.
 
 ## Features
 
 - [X] 💅 `styled-components`, tag agnostic if needed
 - [ ] 🤩 Page Transitions, component-based (with no-js support)
-  > Following Gatsby's switch to @reach/router, page transitions are currently not supported. Follow the progress at [#8](https://github.com/fabe/gatsby-universal/issues/8).
+  > Following Gatsby's switch to @reach/router, page transitions are currently not supported. Follow the progress at [#8](https://github.com/fabe/gatsby-universal/issues/8) and [this issue in `gatsby`](https://github.com/gatsbyjs/gatsby/issues/5656#issuecomment-411762437).
 - [X] 👮‍♂️ `IntersectionObserver`, component-based (with polyfill)
 - [X] 🌿 React Context for global UI state, with SSR
 - [X] 💯 Optimized with Google Lighthouse (including test)
@@ -75,34 +75,33 @@ module.exports = {
 
 ## Folder structure
 ```bash
-├── README.md
-├── gatsby-browser.js
-├── gatsby-config.js
-├── gatsby-node.js
-├── gatsby-ssr.js
-├── package.json
+├── gatsby-browser.js # Specify how Gatsby renders pages in the browser
+├── gatsby-config.js # Gatsby config, mostly taken from `site-config.js`
+├── gatsby-node.js # Modify webpack config
+├── gatsby-ssr.js # Specify how Gatsby builds pages
+├── site-config.js # Global settings for the whole site, used by multiple scripts
+├── content # Content & data, in both json and markdown
 ├── src
 │   ├── components
 │   │   ├── head # All meta tags etc.
-│   │   │   └── head.js
 │   │   ├── io # Intersection Observer component, uses render props
-│   │   │   └── io.js
 │   │   ├── layout # Layout component
 │   │   │   ├── layout.css.js # .css.js for component's styled-components
 │   │   │   └── layout.js
 │   │   └── transition # Page Transition component, can be used with any other
-│   │       └── transition.js
-│   ├── constants
-│   ├── containers
+│   ├── constants # Site-wide constants (breakpoints, colors, etc.)
+│   ├── containers # Container components if state is needed
 │   ├── helpers
 │   │   ├── agnosticStyled.js # Tag-agnostic styled-component
 │   │   ├── mediaTemplates.js # Creates media queries for styled-components
 │   │   └── toFallbackStyleString.js # Creates fallback styles for no-js page transitions
-│   ├── images
+│   ├── images # Images needed by the site/theme (not content)
 │   ├── pages
-│   ├── reset.css.js # Global CSS
-│   └── store
-└── yarn.lock
+│   ├── store # Store and provider of a React.createContext instance
+│   └── reset.css.js # Global CSS
+└── scripts
+    ├── lighthouse.test.js # Tests the site specified inside `site-config.js` with Google Lighthouse (WIP)
+    └── favicons.js # Generates favicons and manifest using one png only.
 ```
 
 ## Author
