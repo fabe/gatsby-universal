@@ -8,7 +8,7 @@ import 'reset.css.js';
 
 const Layout = ({ data, children }) => (
   <div>
-    <Head {...data.site.siteMetadata} />
+    <Head />
     <Header title={data.site.siteMetadata.siteTitle} />
     {children}
   </div>
@@ -26,14 +26,6 @@ const LayoutWithQuery = props => (
         site {
           siteMetadata {
             siteTitle
-            siteTitleShort
-            siteDescription
-            siteUrl
-            themeColor
-            social {
-              twitter
-              fbAppId
-            }
           }
         }
       }
