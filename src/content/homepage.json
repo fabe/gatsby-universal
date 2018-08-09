@@ -1,6 +1,6 @@
 {
   "title": "Home",
-  "content": "An opinionated starter for using Gatsby v2 with React Context, tag-agnostic styled-components, page transitions and scroll events with IntersectionObserver.",
+  "content": "homepage.md",
   "gallery": [{
     "title": "React Context",
     "copy": "For global styles.",

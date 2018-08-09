@@ -10,7 +10,9 @@ import { graphql } from 'gatsby';
 export default ({ data }) => (
   <Layout>
     <Box>
-      <Title tag="span">{data.contentJson.content}</Title>
+      <Title tag="span">
+        {data.contentJson.content.childMarkdownRemark.rawMarkdownBody}
+      </Title>
       <Modal>
         <video
           src="https://i.imgur.com/gzFqNSW.mp4"
@@ -31,7 +33,12 @@ export const query = graphql`
   query HomepageQuery {
     contentJson {
       title
-      content
+      content {
+        childMarkdownRemark {
+          html
+          rawMarkdownBody
+        }
+      }
       gallery {
         title
         copy

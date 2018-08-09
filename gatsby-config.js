@@ -21,6 +21,7 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-offline`,
     `gatsby-transformer-json`,
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
