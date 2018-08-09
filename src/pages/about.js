@@ -1,28 +1,30 @@
 import React from 'react';
 import Layout from 'components/layout';
 import Box from 'components/box';
+import Head from 'components/head';
 
-export default () => (
+export default ({ data }) => (
   <Layout>
+    <Head pageTitle={data.aboutJson.title} />
     <Box>
-      <pre>{`# Installation
-gatsby new my-site https://github.com/fabe/gatsby-universal
-
-# To develop
-yarn develop
-
-# To build
-yarn build
-
-# To test SSR (for Lighthouse etc.)
-yarn ssr
-
-# To format JS (precommit)
-yarn format
-
-# To generate favicons (included in \`build\`)
-yarn build:favicons
-`}</pre>
+      <div
+        dangerouslySetInnerHTML={{
+          __html: data.aboutJson.content.childMarkdownRemark.html,
+        }}
+      />
     </Box>
   </Layout>
 );
+
+export const query = graphql`
+  query AboutQuery {
+    aboutJson {
+      title
+      content {
+        childMarkdownRemark {
+          html
+        }
+      }
+    }
+  }
+`;

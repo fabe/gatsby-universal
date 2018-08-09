@@ -11,7 +11,7 @@ export default ({ data }) => (
   <Layout>
     <Box>
       <Title tag="span">
-        {data.contentJson.content.childMarkdownRemark.rawMarkdownBody}
+        {data.homeJson.content.childMarkdownRemark.rawMarkdownBody}
       </Title>
       <Modal>
         <video
@@ -23,7 +23,7 @@ export default ({ data }) => (
         />
       </Modal>
     </Box>
-    <Gallery items={data.contentJson.gallery} />
+    <Gallery items={data.homeJson.gallery} />
     <div style={{ height: '50vh' }} />
     <Stopper />
   </Layout>
@@ -31,7 +31,7 @@ export default ({ data }) => (
 
 export const query = graphql`
   query HomepageQuery {
-    contentJson {
+    homeJson {
       title
       content {
         childMarkdownRemark {

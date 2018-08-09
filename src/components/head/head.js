@@ -1,15 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
+import { StaticQuery, graphql } from 'gatsby';
 import { Location } from '@reach/router';
-
-// @TODO Still needs the canonical URLs, probably need to pass from pages to <Layout>
 
 const Head = ({
   siteTitle,
   siteTitleShort,
   siteDescription,
   siteUrl,
+  pageTitle,
+  pageTitleFull = pageTitle ? `${siteTitle}: ${pageTitle}` : siteTitle,
   themeColor,
   social,
   imageUrl,
@@ -26,9 +27,9 @@ const Head = ({
     />
 
     <meta content={siteTitle} name="apple-mobile-web-app-title" />
-    <meta content={siteTitle} property="og:title" />
-    <meta content={siteTitle} name="twitter:title" />
-    <title>{siteTitle}</title>
+    <meta content={pageTitleFull} property="og:title" />
+    <meta content={pageTitleFull} name="twitter:title" />
+    <title>{pageTitleFull}</title>
 
     <meta content={siteDescription} name="description" />
     <meta content={siteDescription} property="og:description" />
@@ -48,7 +49,7 @@ const Head = ({
     <meta content="summary_large_image" name="twitter:card" />
     <meta content={`@${social.twitter}`} name="twitter:site" />
     <meta content={`@${social.twitter}`} name="twitter:creator" />
-    <meta content={siteTitle} name="twitter:text:title" />
+    <meta content={pageTitleFull} name="twitter:text:title" />
     <meta content={canonical} property="og:url" />
     <meta content={canonical} name="twitter:url" />
     <link rel="canonical" href={canonical} />
@@ -160,10 +161,35 @@ Head.propTypes = {
   social: PropTypes.objectOf(PropTypes.string),
   imageUrl: PropTypes.string,
   canonical: PropTypes.string,
+  pageTitle: PropTypes.string,
+  pageTitleFull: PropTypes.string,
 };
 
 export default props => (
-  <Location>
-    {({ location }) => <Head {...props} location={location} />}
-  </Location>
+  <StaticQuery
+    query={graphql`
+      query {
+        site {
+          siteMetadata {
+            siteTitle
+            siteTitleShort
+            siteDescription
+            siteUrl
+            themeColor
+            social {
+              twitter
+              fbAppId
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <Location>
+        {({ location }) => (
+          <Head {...data.site.siteMetadata} {...props} location={location} />
+        )}
+      </Location>
+    )}
+  />
 );

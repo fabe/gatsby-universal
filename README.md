@@ -11,7 +11,7 @@ An *opinionated* starter for using Gatsby v2 with React Context, tag-agnostic st
   > Following Gatsby's switch to @reach/router, page transitions are currently not supported. Follow the progress at [#8](https://github.com/fabe/gatsby-universal/issues/8).
 - [X] 👮‍♂️ `IntersectionObserver`, component-based (with polyfill)
 - [X] 🌿 React Context for global UI state, with SSR
-- [X] 💯 Optimized with Google Lighthouse
+- [X] 💯 Optimized with Google Lighthouse (including test)
 - [X] 🔥 Code Splitting of CSS and JS (component based)
 - [X] ⚙️ One config file for site-wide settings
 - [X] 💙 Most social + meta tags in one component

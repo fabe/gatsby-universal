@@ -77,4 +77,8 @@ injectGlobal`
   video {
     max-width: 100%;
   }
+
+  p {
+    margin-bottom: 2rem;
+  }
 `;

@@ -1,7 +1,6 @@
 {
   "title": "Home",
   "content": "intro.md",
-  "showFeaturedImage": true,
   "gallery": [{
     "title": "React Context",
     "copy": "For global styles.",
