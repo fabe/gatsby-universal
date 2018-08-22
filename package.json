@@ -33,7 +33,7 @@
     "styled-components": "^3.4.4"
   },
   "devDependencies": {
-    "ava": "^1.0.0-beta.6",
+    "ava": "^0.25.0",
     "chrome-launcher": "^0.10.2",
     "directory-named-webpack-plugin": "4.0.0",
     "favicons": "^5.1.1",
