@@ -7,8 +7,7 @@ An *opinionated* starter for using Gatsby v2 with React Context, tag-agnostic st
 ## Features
 
 - [X] 💅 `styled-components`, tag agnostic if needed
-- [ ] 🤩 Page Transitions, component-based (with no-js support)
-  > Following Gatsby's switch to @reach/router, page transitions are currently not supported. Follow the progress at [#8](https://github.com/fabe/gatsby-universal/issues/8) and [this issue in `gatsby`](https://github.com/gatsbyjs/gatsby/issues/5656#issuecomment-411762437).
+- [X] 🤩 Page Transitions, component-based (with no-js support)
 - [X] 👮‍♂️ `IntersectionObserver`, component-based (with polyfill)
 - [X] 🌿 React Context for global UI state, with SSR
 - [X] 💯 Optimized with Google Lighthouse (including test)
