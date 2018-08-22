@@ -21,7 +21,14 @@ export const Text = styled`
   }};
   line-height: 1.2;
 
-  ${MEDIA.PHONE`
-    font-size: 1.8rem;
+  ${MEDIA.TABLET`
+    font-size: ${({ size }) => () => {
+      switch (size) {
+        case 'large':
+          return '2.6rem';
+        default:
+          return '2rem';
+      }
+    }};
   `};
 `;

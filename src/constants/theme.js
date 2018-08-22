@@ -1,1 +1,1 @@
-export const accent = `#0674F6`;
+export const accent = `#f90000`;

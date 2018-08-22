@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-import { accent } from 'constants/theme';
-import MEDIA from 'helpers/mediaTemplates';
 
 export const Dialog = styled.div`
   align-items: center;
