@@ -2,8 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Text } from './title.css';
 
-const Title = ({ children, tag = 'h1' }) => {
-  return <Text tag={tag}>{children}</Text>;
+const Title = ({ children, tag = 'h1', size }) => {
+  return (
+    <Text tag={tag} size={size}>
+      {children}
+    </Text>
+  );
 };
 
 Title.propTypes = {

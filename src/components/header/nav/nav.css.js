@@ -6,8 +6,13 @@ export const Container = styled.nav`
     list-style: none;
     padding: 0;
 
-    li + li {
-      margin-left: 1rem;
+    li {
+      text-transform: uppercase;
+      font-size: 1.3rem;
+
+      & + li {
+        margin-left: 2rem;
+      }
     }
   }
 `;

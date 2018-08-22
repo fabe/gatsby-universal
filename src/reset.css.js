@@ -37,6 +37,15 @@ injectGlobal`
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
     line-height: 1;
     font-size: 1.6rem;
+    color: #000;
+    background-color: #fff;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-font-feature-settings: "pnum";
+    font-feature-settings: "pnum";
+    font-variant-numeric: proportional-nums;
   }
 
   ol, ul {
@@ -60,17 +69,18 @@ injectGlobal`
 
   a {
     color: ${accent};
-    text-decoration: none;
   }
 
   pre {
     display: block;
-    padding: 16px;
+    padding: 2rem;
+    margin-top: 4rem;
     overflow: auto;
     font-size: 85%;
     line-height: 1.45;
-    background-color: #f6f8fa;
-    border-radius: 3px;
+    border-radius: 5px;
+    color: ${accent};
+    border: 1px solid #ddd;
     font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace;
   }
 

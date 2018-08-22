@@ -10,7 +10,7 @@ import { graphql } from 'gatsby';
 export default ({ data }) => (
   <Layout>
     <Box>
-      <Title tag="span">
+      <Title tag="span" size="large">
         {data.homeJson.content.childMarkdownRemark.rawMarkdownBody}
       </Title>
       <Modal>
