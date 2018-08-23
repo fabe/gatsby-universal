@@ -16,7 +16,7 @@ const Head = ({
   social,
   imageUrl,
   location,
-  canonical = siteUrl + location.pathname + location.search,
+  canonical = siteUrl + (location.pathname || ''),
 }) => (
   <Helmet>
     <html lang="en" />
