@@ -7,7 +7,7 @@ export default () => (
   <IO rootMargin="-50px">
     {({ isVisible, hasBeenVisible }) => (
       <Container isVisible={isVisible}>
-        <Title>IntersectionObserver</Title>
+        <Title tag="span">IntersectionObserver</Title>
       </Container>
     )}
   </IO>
