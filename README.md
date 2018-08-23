@@ -21,7 +21,7 @@ An *opinionated* starter for using Gatsby v2 with React Context, tag-agnostic st
 - [X] 📱 Generated media queries for easy use
 - [X] 😎 Prettier for code style
 - [X] 👷‍♂️ CircleCI support
-- [ ] 🐙 Schema JSONLD
+- [X] 🐙 Schema JSONLD
 
 ## Lighthouse scores (on Netlify)
 
