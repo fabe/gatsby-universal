@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 import { Location } from '@reach/router';
+import schemaGenerator from 'helpers/schemaGenerator';
 
 const Head = ({
   siteTitle,
@@ -149,6 +150,19 @@ const Head = ({
       sizes="16x16"
       type="image/png"
     />
+
+    <script type="application/ld+json">
+      {JSON.stringify(
+        schemaGenerator({
+          location,
+          canonical,
+          siteUrl,
+          pageTitle,
+          siteTitle,
+          pageTitleFull,
+        })
+      )}
+    </script>
   </Helmet>
 );
 
