@@ -87,15 +87,14 @@ module.exports = {
 │   │   ├── head # All meta tags etc.
 │   │   ├── io # Intersection Observer component, uses render props
 │   │   ├── layout # Layout component
-│   │   │   ├── layout.css.js # .css.js for component's styled-components
+│   │   │   ├── layout.css.js # .css.js for component's `styled-components`
 │   │   │   └── layout.js
-│   │   └── transition # Page Transition component, can be used with any other
+│   │   └── transition # Page Transition component, used by Gatsby APIs
 │   ├── constants # Site-wide constants (breakpoints, colors, etc.)
-│   ├── containers # Container components if state is needed
+│   ├── containers # Container components if store is needed
 │   ├── helpers
 │   │   ├── agnosticStyled.js # Tag-agnostic styled-component
-│   │   ├── mediaTemplates.js # Creates media queries for styled-components
-│   │   └── toFallbackStyleString.js # Creates fallback styles for no-js page transitions
+│   │   └── mediaTemplates.js # Creates media queries for styled-components
 │   ├── images # Images needed by the site/theme (not content)
 │   ├── pages
 │   ├── store # Store and provider of a React.createContext instance
