@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import posed, { PoseGroup } from 'react-pose';
-
-const timeout = 250;
+import { timeout } from 'constants/transition';
 
 class Transition extends PureComponent {
   render() {
@@ -21,5 +21,10 @@ class Transition extends PureComponent {
     );
   }
 }
+
+Transition.propTypes = {
+  children: PropTypes.node.isRequired,
+  location: PropTypes.object.isRequired,
+};
 
 export default Transition;

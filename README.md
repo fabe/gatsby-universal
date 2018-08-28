@@ -74,6 +74,8 @@ module.exports = {
 };
 ```
 
+> 🚨 Don't forget to update your `robots.txt` inside `static/`!
+
 ## Folder structure
 ```bash
 ├── gatsby-browser.js # Specify how Gatsby renders pages in the browser
