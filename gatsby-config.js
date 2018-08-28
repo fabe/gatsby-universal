@@ -1,20 +1,8 @@
-const {
-  siteTitle,
-  siteTitleShort,
-  siteDescription,
-  siteUrl,
-  themeColor,
-  social,
-} = require('./site-config');
+const siteConfig = require('./site-config');
 
 module.exports = {
   siteMetadata: {
-    siteTitle,
-    siteTitleShort,
-    siteDescription,
-    siteUrl,
-    themeColor,
-    social,
+    ...siteConfig,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
