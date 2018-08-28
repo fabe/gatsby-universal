@@ -1,6 +1,6 @@
 import React from 'react';
-import Transition from 'components/transition';
 import AppProvider from 'store/provider';
+import wrapPageElementWithTransition from 'helpers/wrapPageElement';
 
 // React Context in Browser
 export const wrapRootElement = ({ element }) => {
@@ -8,6 +8,4 @@ export const wrapRootElement = ({ element }) => {
 };
 
 // Page Transitions
-export const wrapPageElement = ({ element, props }) => {
-  return <Transition {...props}>{element}</Transition>;
-};
+export const wrapPageElement = wrapPageElementWithTransition;
