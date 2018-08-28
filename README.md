@@ -31,7 +31,7 @@ You can access a demo of this starter online at https://gatsby-universal.netlify
 
 ## Usage
 
-> To make sure you have the correct beta versions of Gatsby, please use `yarn` to install the dependencies.
+> 🚨 To make sure you have the correct beta versions of Gatsby, please use `yarn` to install the dependencies.
 
 ```bash
 # Installation
