@@ -11,8 +11,8 @@ You can access a demo of this starter online at https://gatsby-universal.netlify
 - [X] 🤩 Page Transitions, component-based (with no-js support)
 - [X] 👮‍♂️ `IntersectionObserver`, component-based (with polyfill)
 - [X] 🌿 React Context for global UI state, with SSR
-- [X] 💅 `styled-components` v4
-- [X] 💯 Optimized with Google Lighthouse (including test)
+- [X] 💅 [`styled-components`](https://www.styled-components.com/) v4
+- [X] 💯 Optimized with [Google Lighthouse](https://developers.google.com/web/tools/lighthouse/) (including test)
 - [X] 🔥 Code Splitting of CSS and JS (component based)
 - [X] ⚙️ One config file for site-wide settings
 - [X] 💙 Most social + meta tags in one component
@@ -21,12 +21,12 @@ You can access a demo of this starter online at https://gatsby-universal.netlify
 - [X] 📄 Manifest support
 - [X] 🗺 Sitemap support
 - [X] 📱 Generated media queries for easy use
-- [X] 😎 Prettier for code style
-- [X] 👷‍♂️ CircleCI support
+- [X] 😎 [Prettier](https://prettier.io/) for code style
+- [X] 👷‍♂️ [CircleCI](https://circleci.com/) support
 - [X] 🐙 Schema JSONLD
 - [X] 🔎 [`size-plugin`](https://github.com/GoogleChromeLabs/size-plugin) to keep an eye on your bundle sizes
 
-## Lighthouse scores (on Netlify)
+## Lighthouse scores (on [Netlify](https://netlify.com))
 
 [![Lighthouse scores (on Netlify)](https://lighthouse.now.sh/?perf=100&pwa=100&a11y=100&bp=100&seo=100)](https://circleci.com/gh/fabe/gatsby-universal)
 
@@ -96,12 +96,12 @@ module.exports = {
 │   ├── constants # Site-wide constants (breakpoints, colors, etc.)
 │   ├── containers # Container components if store is needed
 │   ├── helpers
-│   │   ├── agnosticStyled.js # Tag-agnostic styled-component
+│   │   ├── schemaGenerator.js # Generates JSON-LD schema.org snippets
 │   │   └── mediaTemplates.js # Creates media queries for styled-components
 │   ├── images # Images needed by the site/theme (not content)
 │   ├── pages
 │   ├── store # Store and provider of a React.createContext instance
-│   └── reset.css.js # Global CSS
+│   └── global.css.js # Global CSS
 └── scripts
     ├── lighthouse.test.js # Tests the site specified inside `site-config.js` with Google Lighthouse (WIP)
     └── favicons.js # Generates favicons and manifest using one png only.
@@ -109,4 +109,4 @@ module.exports = {
 
 ## Author
 
-* Fabian Schultz ([@fschultz\_](https://twitter.com/fschultz_)) - [Stink Studios](https://stinkstudios.com)
+* Fabian Schultz ([@fschultz_](https://twitter.com/fschultz_)) - [Stink Studios](https://stinkstudios.com)
