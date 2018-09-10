@@ -8,10 +8,10 @@ You can access a demo of this starter online at https://gatsby-universal.netlify
 
 ## Features
 
-- [X] 💅 `styled-components`, tag agnostic if needed
 - [X] 🤩 Page Transitions, component-based (with no-js support)
 - [X] 👮‍♂️ `IntersectionObserver`, component-based (with polyfill)
 - [X] 🌿 React Context for global UI state, with SSR
+- [X] 💅 `styled-components` v4
 - [X] 💯 Optimized with Google Lighthouse (including test)
 - [X] 🔥 Code Splitting of CSS and JS (component based)
 - [X] ⚙️ One config file for site-wide settings
@@ -24,6 +24,7 @@ You can access a demo of this starter online at https://gatsby-universal.netlify
 - [X] 😎 Prettier for code style
 - [X] 👷‍♂️ CircleCI support
 - [X] 🐙 Schema JSONLD
+- [X] 🔎 [`size-plugin`](https://github.com/GoogleChromeLabs/size-plugin) to keep an eye on your bundle sizes
 
 ## Lighthouse scores (on Netlify)
 
