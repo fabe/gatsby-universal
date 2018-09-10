@@ -1,25 +1,5 @@
 import styled from 'styled-components';
 
-export const Dialog = styled.div`
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.4);
-  border: none;
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  left: 0;
-  overflow: hidden;
-  padding: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 10;
-
-  &[aria-hidden='true'] {
-    display: none;
-  }
-`;
-
 export const Button = styled.button`
   -webkit-appearance: none;
   background-color: #fff;
@@ -49,4 +29,19 @@ export const Button = styled.button`
   & + & {
     margin-left: 1rem;
   }
+`;
+
+export const Close = styled.button`
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: 4rem;
+  font-weight: normal;
+  padding: 1rem;
+  line-height: 4rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #fff;
 `;

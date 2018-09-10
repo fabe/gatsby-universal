@@ -1,30 +1,33 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { Dialog, Button } from './modal.css';
+import { Button, Close } from './modal.css';
+import { Dialog } from '@reach/dialog';
+import VisuallyHidden from '@reach/visually-hidden';
+
+import '@reach/dialog/styles.css';
 
 // This component is here only to to showcase the
-// React Context integration. There are probably a
-// lot of much better Modal components available.
+// React Context integration. No need to keep this if
+// you don't require a Modal in your project.
 export default class Modal extends PureComponent {
   componentDidMount() {
-    window.addEventListener('keydown', this.onEscape);
+    document.addEventListener('keydown', this.onKeyDown);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('keydown', this.onEscape);
+    document.removeEventListener('keydown', this.onKeyDown);
   }
 
-  onEscape = ({ key }) => {
+  onKeyDown = ({ key }) => {
     if (key === 'Escape') {
-      this.props.visible && this.props.toggleModal();
+      this.props.open && this.props.hideModal();
     }
   };
 
-  disableScrolling(visible) {
-    // TODO This is probably not good practice.
-    // Putting it into the store sounds fishy as well, though.
-    // Disables scrolling when the modal is open.
-    if (visible) {
+  disableScrolling(open) {
+    // Disables scrolling when the modal is open, as suggested by
+    // https://www.w3.org/TR/2017/NOTE-wai-aria-practices-1.1-20171214/examples/dialog-modal/dialog.html
+    if (open) {
       document.body.style.overflow = 'hidden';
       document.documentElement.style.overflow = 'hidden';
     } else {
@@ -34,21 +37,21 @@ export default class Modal extends PureComponent {
   }
 
   render() {
-    const { children, visible, toggleModal } = this.props;
+    const { children, open, showModal, hideModal } = this.props;
 
     if (typeof document !== `undefined`) {
-      this.disableScrolling(visible);
+      this.disableScrolling(open);
     }
 
     return (
       <>
-        <Button onClick={toggleModal}>Show Modal</Button>
+        <Button onClick={showModal}>Show Modal</Button>
 
-        <Dialog
-          aria-hidden={!visible}
-          onClick={toggleModal}
-          ref={modal => (this.modal = modal)}
-        >
+        <Dialog isOpen={open}>
+          <Close onClick={hideModal}>
+            <VisuallyHidden>Close</VisuallyHidden>
+            <span aria-hidden>×</span>
+          </Close>
           {children}
         </Dialog>
       </>
@@ -58,6 +61,7 @@ export default class Modal extends PureComponent {
 
 Modal.propTypes = {
   children: PropTypes.node,
-  visible: PropTypes.bool.isRequired,
-  toggleModal: PropTypes.func,
+  open: PropTypes.bool.isRequired,
+  showModal: PropTypes.func,
+  hideModal: PropTypes.func,
 };

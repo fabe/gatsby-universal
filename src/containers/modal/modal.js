@@ -4,8 +4,13 @@ import Modal from 'components/modal';
 
 export default ({ children }) => (
   <Consumer>
-    {({ visible, toggleModal }) => (
-      <Modal visible={visible} toggleModal={toggleModal} children={children} />
+    {({ open, showModal, hideModal }) => (
+      <Modal
+        open={open}
+        showModal={showModal}
+        hideModal={hideModal}
+        children={children}
+      />
     )}
   </Consumer>
 );
