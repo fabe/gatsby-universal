@@ -3,7 +3,7 @@ import { renderToString } from 'react-dom/server';
 import { ServerStyleSheet } from 'styled-components';
 import AppProvider from 'store/provider';
 import wrapPageElementWithTransition from 'helpers/wrapPageElement';
-import ResetCSS from 'reset.css.js';
+import GlobalStyle from 'global.css.js';
 
 export const replaceRenderer = ({
   bodyComponent,
@@ -13,7 +13,7 @@ export const replaceRenderer = ({
   // React Context in SSR/build
   const ConnectedBody = () => (
     <AppProvider>
-      <ResetCSS />
+      <GlobalStyle />
       {bodyComponent}
     </AppProvider>
   );
