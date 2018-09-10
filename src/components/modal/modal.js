@@ -47,7 +47,7 @@ export default class Modal extends PureComponent {
         <Dialog
           aria-hidden={!visible}
           onClick={toggleModal}
-          innerRef={modal => (this.modal = modal)}
+          ref={modal => (this.modal = modal)}
         >
           {children}
         </Dialog>

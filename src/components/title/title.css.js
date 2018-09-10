@@ -1,7 +1,7 @@
-import styled from 'helpers/agnosticStyled';
+import styled from 'styled-components';
 import MEDIA from 'helpers/mediaTemplates';
 
-export const Text = styled`
+export const Text = styled.span`
   display: block;
   font-weight: ${({ size }) => () => {
     switch (size) {
