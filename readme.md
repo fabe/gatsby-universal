@@ -4,9 +4,9 @@
 [![dependencies](https://img.shields.io/david/fabe/gatsby-universal.svg)](./package.json)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier) [![deploys by netlify](https://img.shields.io/badge/deploys%20by-netlify-00c7b7.svg)](https://www.netlify.com)
 
-An *opinionated* starter for using Gatsby v2 with React Context, tag-agnostic styled-components, page transitions, scroll events with `IntersectionObserver`. Made for state-of-the-art marketing sites.
+An *opinionated* starter for using Gatsby v2 with React Context, styled-components, page transitions, scroll events with `IntersectionObserver` and a focus on accessibility and SEO. Made for state-of-the-art marketing sites.
 
-You can access a demo of this starter online at https://gatsby-universal.netlify.com.
+You can access a demo of this starter online at [gatsby-universal.netlify.com](https://gatsby-universal.netlify.com).
 
 ## Features
 
@@ -28,17 +28,22 @@ You can access a demo of this starter online at https://gatsby-universal.netlify
 - [X] 🐙 Schema JSONLD
 - [X] 🔎 [`size-plugin`](https://github.com/GoogleChromeLabs/size-plugin) to keep an eye on your bundle sizes
 
+Do you have suggestions or feedback? [Open an issue](https://github.com/fabe/gatsby-universal/issues/new)!
+
 ## Lighthouse scores (on [Netlify](https://netlify.com))
 
 [![Lighthouse scores (on Netlify)](https://lighthouse.now.sh/?perf=100&pwa=100&a11y=100&bp=100&seo=100)](https://circleci.com/gh/fabe/gatsby-universal)
 
 ## Usage
 
-> 🚨 To make sure you have the correct beta versions of Gatsby, please use `yarn` to install the dependencies.
-
 ```bash
-# Installation
+# Installation with `gatsby-cli`
 gatsby new my-site https://github.com/fabe/gatsby-universal
+
+# Installation with `git clone`
+git clone my-site git@github.com:fabe/gatsby-universal.git
+cd my-site
+yarn install
 
 # To develop
 yarn develop
@@ -55,6 +60,8 @@ yarn format
 # To generate favicons (included in `build`)
 yarn build:favicons
 ```
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/fabe/gatsby-universal)
 
 ## Configuration
 
