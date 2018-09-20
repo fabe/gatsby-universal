@@ -17,7 +17,7 @@
     "@reach/router": "^1.1.1",
     "@reach/visually-hidden": "^0.1.1",
     "babel-plugin-styled-components": "^1.7.1",
-    "gatsby": "^2.0.0",
+    "gatsby": "^2.0.6",
     "gatsby-image": "^2.0.5",
     "gatsby-plugin-offline": "^2.0.5",
     "gatsby-plugin-react-helmet": "^3.0.0",
@@ -35,7 +35,7 @@
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0",
     "react-pose": "^3.3.0",
-    "styled-components": "^4.0.0-beta.6"
+    "styled-components": "^4.0.0-beta.7"
   },
   "devDependencies": {
     "ava": "^0.25.0",
