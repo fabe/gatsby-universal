@@ -1,12 +1,50 @@
-# gatsby-universal
+<p align="center">
+  <a href="https://github.com/fabe/gatsby-universal">
+    <img
+      src="https://i.imgur.com/MFWrZSx.png"
+      height="80"
+      alt="gatsby-universal"
+      title="gatsby-universal"
+    />
+  </a>
+</p>
 
-[![CircleCI](https://circleci.com/gh/fabe/gatsby-universal.svg?style=svg)](https://circleci.com/gh/fabe/gatsby-universal)
-[![dependencies](https://img.shields.io/david/fabe/gatsby-universal.svg)](./package.json)
-[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier) [![deploys by netlify](https://img.shields.io/badge/deploys%20by-netlify-00c7b7.svg)](https://www.netlify.com)
+<p align="center">
+  <a href="https://circleci.com/gh/fabe/gatsby-universal">
+    <img
+      src="https://circleci.com/gh/fabe/gatsby-universal.svg?style=svg"
+      alt="CircleCI"
+    />
+  </a>
+  <a href="./package.json">
+    <img
+      src="https://img.shields.io/david/fabe/gatsby-universal.svg"
+      alt="dependencies"
+    />
+  </a>
+  <a href="https://github.com/prettier/prettier">
+    <img
+      src="https://img.shields.io/badge/styled_with-prettier-ff69b4.svg"
+      alt="styled with prettier"
+    />
+  </a>
+  <a href="https://www.netlify.com">
+    <img
+      src="https://img.shields.io/badge/deploys%20by-netlify-00c7b7.svg"
+      alt="deploys by netlify"
+    />
+  </a>
+</p>
 
-An *opinionated* starter for using Gatsby v2 with React Context, styled-components, page transitions, scroll events with `IntersectionObserver` and a focus on accessibility and SEO. Made for state-of-the-art marketing sites.
+<p align="center">
+  An <em>opinionated</em> starter for using Gatsby v2 with React Context, styled-components, page transitions, scroll events with <code>IntersectionObserver</code> and a focus on accessibility and SEO. Made for state-of-the-art marketing sites.
+</p>
 
-You can access a demo of this starter online at [gatsby-universal.netlify.com](https://gatsby-universal.netlify.com).
+<p align="center">
+  <strong>
+    You can access a demo of this starter online at <a href="https://gatsby-universal.netlify.com">gatsby-universal.netlify.com</a>.
+  </strong>
+</p>
 
 ## Features
 
