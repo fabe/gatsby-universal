@@ -46,6 +46,8 @@
   </strong>
 </p>
 
+***
+
 ## Features
 
 - [X] 🤩 Page Transitions, component-based (with no-js support)
