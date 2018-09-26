@@ -56,6 +56,7 @@
 - [X] 💅 [`styled-components`](https://www.styled-components.com/) v4
 - [X] 💯 Optimized with [Google Lighthouse](https://developers.google.com/web/tools/lighthouse/) (including test)
 - [X] 🔥 Code Splitting of CSS and JS (component based)
+- [X] 🔪 Inline SVG support
 - [X] ⚙️ One config file for site-wide settings
 - [X] 💙 Most social + meta tags in one component
 - [X] 🖼 All favicons generated, only one icon file needed
