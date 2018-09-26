@@ -1,6 +1,8 @@
 import React from 'react';
 import Transition from 'components/transition';
 
-export default ({ element, props }) => {
+const wrapPageElement = ({ element, props }) => {
   return <Transition {...props}>{element}</Transition>;
 };
+
+export default wrapPageElement;

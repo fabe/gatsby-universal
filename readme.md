@@ -68,6 +68,7 @@
 - [X] 👷‍♂️ [CircleCI](https://circleci.com/) support
 - [X] 🐙 Schema JSONLD
 - [X] 🔎 [`size-plugin`](https://github.com/GoogleChromeLabs/size-plugin) to keep an eye on your bundle sizes
+- [X] 👨‍🏫 ESLint (based on [`eslint-plugin-react`](./.eslintrc))
 
 Do you have suggestions or feedback? [Open an issue](https://github.com/fabe/gatsby-universal/issues/new)!
 

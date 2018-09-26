@@ -39,7 +39,7 @@ export default class Modal extends PureComponent {
   render() {
     const { children, open, showModal, hideModal } = this.props;
 
-    if (typeof document !== `undefined`) {
+    if (typeof document !== 'undefined') {
       this.disableScrolling(open);
     }
 

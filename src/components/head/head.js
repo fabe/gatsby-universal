@@ -7,7 +7,6 @@ import schemaGenerator from 'helpers/schemaGenerator';
 
 const Head = ({
   siteTitle,
-  siteTitleShort,
   siteDescription,
   siteUrl,
   pageTitle,
@@ -177,9 +176,10 @@ Head.propTypes = {
   canonical: PropTypes.string,
   pageTitle: PropTypes.string,
   pageTitleFull: PropTypes.string,
+  location: PropTypes.object.isRequired,
 };
 
-export default props => (
+const HeadWithQuery = props => (
   <StaticQuery
     query={graphql`
       query {
@@ -207,3 +207,5 @@ export default props => (
     )}
   />
 );
+
+export default HeadWithQuery;

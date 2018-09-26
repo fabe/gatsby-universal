@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Layout from 'components/layout';
 import Box from 'components/box';
 import Title from 'components/title';
@@ -7,7 +8,7 @@ import IOExample from 'components/io-example';
 import Modal from 'containers/modal';
 import { graphql } from 'gatsby';
 
-export default ({ data }) => (
+const Index = ({ data }) => (
   <Layout>
     <Box>
       <Title as="h2" size="large">
@@ -28,6 +29,12 @@ export default ({ data }) => (
     <IOExample />
   </Layout>
 );
+
+Index.propTypes = {
+  data: PropTypes.object.isRequired,
+};
+
+export default Index;
 
 export const query = graphql`
   query HomepageQuery {
