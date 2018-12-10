@@ -7,7 +7,7 @@
     "serve": "gatsby serve",
     "ssr": "npm run build && npm run serve",
     "format": "prettier --config ./.prettierrc --write src/**/*.js",
-    "build:dir": "mkdir -p public/icons/",
+    "build:dir": "mkdirp ./public/icons/",
     "build:favicons": "node scripts/favicons",
     "build": "npm run build:dir && npm run build:favicons && gatsby build",
     "test": "ava **/*.test.js --verbose"
@@ -53,6 +53,7 @@
     "favicons": "^5.1.1",
     "gatsby-plugin-eslint": "^2.0.1",
     "lighthouse": "^3.0.3",
+    "mkdirp": "^0.5.1",
     "node-gyp": "^3.7.0",
     "prettier": "^1.13.5",
     "why-did-you-update": "0.1.1"
