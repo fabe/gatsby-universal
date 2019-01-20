@@ -16,12 +16,6 @@
       alt="CircleCI"
     />
   </a>
-  <a href="./package.json">
-    <img
-      src="https://img.shields.io/david/fabe/gatsby-universal.svg"
-      alt="dependencies"
-    />
-  </a>
   <a href="https://greenkeeper.io/">
     <img
       src="https://badges.greenkeeper.io/fabe/gatsby-universal.svg"
