@@ -16,10 +16,10 @@
       alt="CircleCI"
     />
   </a>
-  <a href="./package.json">
+  <a href="https://greenkeeper.io/">
     <img
-      src="https://img.shields.io/david/fabe/gatsby-universal.svg"
-      alt="dependencies"
+      src="https://badges.greenkeeper.io/fabe/gatsby-universal.svg"
+      alt="Greenkeeper badge"
     />
   </a>
   <a href="https://github.com/prettier/prettier">

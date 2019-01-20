@@ -12,6 +12,11 @@
     "build": "npm run build:dir && npm run build:favicons && gatsby build",
     "test": "ava **/*.test.js --verbose"
   },
+  "greenkeeper": {
+    "ignore": [
+      "ava"
+    ]
+  },
   "dependencies": {
     "@reach/dialog": "^0.1.2",
     "@reach/router": "^1.2.1",
