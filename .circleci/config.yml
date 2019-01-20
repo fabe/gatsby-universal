@@ -1,9 +1,6 @@
 version: 2
 jobs:
   build:
-    branches:
-      only:
-        - master
     docker:
       - image: circleci/node:8.11-browsers
     working_directory: ~/repo
