@@ -22,6 +22,12 @@
       alt="dependencies"
     />
   </a>
+  <a href="https://greenkeeper.io/">
+    <img
+      src="https://badges.greenkeeper.io/fabe/gatsby-universal.svg"
+      alt="Greenkeeper badge"
+    />
+  </a>
   <a href="https://github.com/prettier/prettier">
     <img
       src="https://img.shields.io/badge/styled_with-prettier-ff69b4.svg"
@@ -79,7 +85,7 @@ Do you have suggestions or feedback? [Open an issue](https://github.com/fabe/gat
 ## Usage
 
 [![Edit on CodeSandbox](https://cdn.rawgit.com/fabe/1dd805eed0153b47aba2b50cea2469ec/raw/64b0ea90c2a425d3847da908053f5f337128259b/edit-on-codesandbox-32px.svg)](https://codesandbox.io/s/github/fabe/gatsby-universal)
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/fabe/gatsby-universal) [![Greenkeeper badge](https://badges.greenkeeper.io/fabe/gatsby-universal.svg)](https://greenkeeper.io/)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/fabe/gatsby-universal)
 
 ```bash
 # Installation with `gatsby-cli`
