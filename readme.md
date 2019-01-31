@@ -28,10 +28,10 @@
       alt="styled with prettier"
     />
   </a>
-  <a href="https://www.netlify.com">
+  <a href="https://app.netlify.com/sites/gatsby-universal/deploys">
     <img
-      src="https://img.shields.io/badge/deploys%20by-netlify-00c7b7.svg"
-      alt="deploys by netlify"
+      src="https://api.netlify.com/api/v1/badges/3e49bb6e-c385-4807-a7e8-70eea491cfdf/deploy-status"
+      alt="Netlify Status"
     />
   </a>
 </p>
