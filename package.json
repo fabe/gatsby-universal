@@ -23,7 +23,7 @@
     "@reach/visually-hidden": "^0.1.1",
     "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.0.91",
-    "gatsby-image": "^2.0.26",
+    "gatsby-image": "^2.0.29",
     "gatsby-plugin-offline": "^2.0.21",
     "gatsby-plugin-react-helmet": "^3.0.5",
     "gatsby-plugin-react-svg": "^2.0.0",
