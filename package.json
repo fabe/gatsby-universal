@@ -25,7 +25,7 @@
     "gatsby": "^2.0.91",
     "gatsby-image": "^2.0.29",
     "gatsby-plugin-offline": "^2.0.23",
-    "gatsby-plugin-react-helmet": "^3.0.5",
+    "gatsby-plugin-react-helmet": "^3.0.6",
     "gatsby-plugin-react-svg": "^2.0.0",
     "gatsby-plugin-sharp": "^2.0.17",
     "gatsby-plugin-sitemap": "^2.0.4",
