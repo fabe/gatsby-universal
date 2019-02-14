@@ -32,7 +32,7 @@
     "gatsby-plugin-styled-components": "^3.0.5",
     "gatsby-plugin-webpack-size": "^0.0.3",
     "gatsby-source-filesystem": "^2.0.20",
-    "gatsby-transformer-json": "^2.1.7",
+    "gatsby-transformer-json": "^2.1.8",
     "gatsby-transformer-remark": "^2.2.0",
     "gatsby-transformer-sharp": "^2.1.10",
     "intersection-observer": "^0.5.1",
