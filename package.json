@@ -34,7 +34,7 @@
     "gatsby-source-filesystem": "^2.0.20",
     "gatsby-transformer-json": "^2.1.8",
     "gatsby-transformer-remark": "^2.2.5",
-    "gatsby-transformer-sharp": "^2.1.10",
+    "gatsby-transformer-sharp": "^2.1.13",
     "intersection-observer": "^0.5.1",
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
