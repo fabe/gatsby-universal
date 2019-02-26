@@ -50,7 +50,7 @@
     "core-js": "^2.6.2",
     "directory-named-webpack-plugin": "^4.0.0",
     "eslint": "^5.12.1",
-    "eslint-config-prettier": "^3.6.0",
+    "eslint-config-prettier": "^4.1.0",
     "eslint-loader": "^2.1.1",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
