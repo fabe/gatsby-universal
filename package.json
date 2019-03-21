@@ -14,7 +14,8 @@
   },
   "greenkeeper": {
     "ignore": [
-      "ava"
+      "ava",
+      "core-js"
     ]
   },
   "dependencies": {
