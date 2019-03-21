@@ -31,7 +31,7 @@
     "gatsby-plugin-sitemap": "^2.0.10",
     "gatsby-plugin-styled-components": "^3.0.7",
     "gatsby-plugin-webpack-size": "^0.0.3",
-    "gatsby-source-filesystem": "^2.0.25",
+    "gatsby-source-filesystem": "^2.0.27",
     "gatsby-transformer-json": "^2.1.10",
     "gatsby-transformer-remark": "^2.3.3",
     "gatsby-transformer-sharp": "^2.1.17",
