@@ -86,7 +86,7 @@ Do you have suggestions or feedback? [Open an issue](https://github.com/fabe/gat
 gatsby new my-site https://github.com/fabe/gatsby-universal
 
 # Installation with `git clone`
-git clone my-site git@github.com:fabe/gatsby-universal.git
+git clone git@github.com:fabe/gatsby-universal.git my-site
 cd my-site
 yarn install
 
